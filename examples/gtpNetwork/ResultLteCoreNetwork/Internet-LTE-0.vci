@@ -1,0 +1,210 @@
+file 7571 1375706822                                            
+version 2
+run Internet-LTE-0-20130805-14:47:00-7633
+attr configname Internet-LTE
+attr datetime 20130805-14:47:00
+attr experiment Internet-LTE
+attr inifile lteCoreExample.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network lteCoreNetwork
+attr processid 7633
+attr repetition 0
+attr replication #0
+attr resultdir ResultLteCoreNetwork
+attr runnumber 0
+attr seedset 0
+
+vector 12  lteCoreNetwork.pgwStandard.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 13  lteCoreNetwork.pgwStandard.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 23  lteCoreNetwork.pgwStandard.pppInterface.queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 24  lteCoreNetwork.pgwStandard.pppInterface.ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 43  lteCoreNetwork.eNB3.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 44  lteCoreNetwork.eNB3.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 54  lteCoreNetwork.eNB3.pppInterface.queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 55  lteCoreNetwork.eNB3.pppInterface.ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 74  lteCoreNetwork.eNB1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 75  lteCoreNetwork.eNB1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 85  lteCoreNetwork.eNB1.pppInterface.queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 86  lteCoreNetwork.eNB1.pppInterface.ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 105  lteCoreNetwork.eNB2.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 106  lteCoreNetwork.eNB2.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 116  lteCoreNetwork.eNB2.pppInterface.queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 117  lteCoreNetwork.eNB2.pppInterface.ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 136  lteCoreNetwork.sgwStandard2.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 137  lteCoreNetwork.sgwStandard2.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 147  lteCoreNetwork.sgwStandard2.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 148  lteCoreNetwork.sgwStandard2.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 167  lteCoreNetwork.sgwStandard1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 168  lteCoreNetwork.sgwStandard1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 178  lteCoreNetwork.sgwStandard1.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 179  lteCoreNetwork.sgwStandard1.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 193  lteCoreNetwork.router.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 194  lteCoreNetwork.router.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 204  lteCoreNetwork.router.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 205  lteCoreNetwork.router.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 215  lteCoreNetwork.router.ppp[2].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 216  lteCoreNetwork.router.ppp[2].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 230  lteCoreNetwork.router1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 231  lteCoreNetwork.router1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 241  lteCoreNetwork.router1.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 242  lteCoreNetwork.router1.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 256  lteCoreNetwork.router2.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 257  lteCoreNetwork.router2.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 267  lteCoreNetwork.router2.ppp[1].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 268  lteCoreNetwork.router2.ppp[1].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 278  lteCoreNetwork.router2.ppp[2].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 279  lteCoreNetwork.router2.ppp[2].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 305  lteCoreNetwork.router3.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 306  lteCoreNetwork.router3.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 351  lteCoreNetwork.UE1.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 352  lteCoreNetwork.UE1.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 366  lteCoreNetwork.UE2.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 367  lteCoreNetwork.UE2.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 381  lteCoreNetwork.UE3.ppp[0].queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 382  lteCoreNetwork.UE3.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+12	7103 9 0 0 0 0 1 0 0 0 0
+13	7112 9 0 0 0 0 1 0 0 0 0
+23	7121 9 0 0 0 0 1 0 0 0 0
+24	7130 9 0 0 0 0 1 0 0 0 0
+43	7139 9 0 0 0 0 1 0 0 0 0
+44	7148 9 0 0 0 0 1 0 0 0 0
+54	7157 9 0 0 0 0 1 0 0 0 0
+55	7166 9 0 0 0 0 1 0 0 0 0
+74	7175 9 0 0 0 0 1 0 0 0 0
+75	7184 9 0 0 0 0 1 0 0 0 0
+85	7193 9 0 0 0 0 1 0 0 0 0
+86	7202 9 0 0 0 0 1 0 0 0 0
+105	7211 10 0 0 0 0 1 0 0 0 0
+106	7221 10 0 0 0 0 1 0 0 0 0
+116	7231 10 0 0 0 0 1 0 0 0 0
+117	7241 10 0 0 0 0 1 0 0 0 0
+136	7251 10 0 0 0 0 1 0 0 0 0
+137	7261 10 0 0 0 0 1 0 0 0 0
+147	7271 10 0 0 0 0 1 0 0 0 0
+148	7281 10 0 0 0 0 1 0 0 0 0
+167	7291 10 0 0 0 0 1 0 0 0 0
+168	7301 10 0 0 0 0 1 0 0 0 0
+178	7311 10 0 0 0 0 1 0 0 0 0
+179	7321 10 0 0 0 0 1 0 0 0 0
+193	7331 10 0 0 0 0 1 0 0 0 0
+194	7341 10 0 0 0 0 1 0 0 0 0
+204	7351 10 0 0 0 0 1 0 0 0 0
+205	7361 10 0 0 0 0 1 0 0 0 0
+215	7371 10 0 0 0 0 1 0 0 0 0
+216	7381 10 0 0 0 0 1 0 0 0 0
+230	7391 10 0 0 0 0 1 0 0 0 0
+231	7401 10 0 0 0 0 1 0 0 0 0
+241	7411 10 0 0 0 0 1 0 0 0 0
+242	7421 10 0 0 0 0 1 0 0 0 0
+256	7431 10 0 0 0 0 1 0 0 0 0
+257	7441 10 0 0 0 0 1 0 0 0 0
+267	7451 10 0 0 0 0 1 0 0 0 0
+268	7461 10 0 0 0 0 1 0 0 0 0
+278	7471 10 0 0 0 0 1 0 0 0 0
+279	7481 10 0 0 0 0 1 0 0 0 0
+305	7491 10 0 0 0 0 1 0 0 0 0
+306	7501 10 0 0 0 0 1 0 0 0 0
+351	7511 10 0 0 0 0 1 0 0 0 0
+352	7521 10 0 0 0 0 1 0 0 0 0
+366	7531 10 0 0 0 0 1 0 0 0 0
+367	7541 10 0 0 0 0 1 0 0 0 0
+381	7551 10 0 0 0 0 1 0 0 0 0
+382	7561 10 0 0 0 0 1 0 0 0 0

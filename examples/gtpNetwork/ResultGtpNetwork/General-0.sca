@@ -1,0 +1,2420 @@
+version 2
+run General-0-20130805-14:45:32-7567
+attr configname General
+attr datetime 20130805-14:45:32
+attr experiment General
+attr inifile gtpExample.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network GtpNetwork
+attr processid 7567
+attr repetition 0
+attr replication #0
+attr resultdir ResultGtpNetwork
+attr runnumber 0
+attr seedset 0
+
+scalar GtpNetwork.Host3.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar GtpNetwork.Host3.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar GtpNetwork.Host3.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar GtpNetwork.Host3.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar GtpNetwork.Host3.eth[0].mac 	"simulated time" 	8.5009868
+scalar GtpNetwork.Host3.eth[0].mac 	full-duplex 	1
+scalar GtpNetwork.Host3.eth[0].mac 	"frames/sec sent" 	1.0587006204974
+scalar GtpNetwork.Host3.eth[0].mac 	"frames/sec rcvd" 	1.0587006204974
+scalar GtpNetwork.Host3.eth[0].mac 	"bits/sec sent" 	767.91085006743
+scalar GtpNetwork.Host3.eth[0].mac 	"bits/sec rcvd" 	767.91085006743
+scalar GtpNetwork.Host3.eth[0].mac 	"rx channel idle (%)" 	99.991643323102
+scalar GtpNetwork.Host3.eth[0].mac 	"rx channel utilization (%)" 	0.0083566768977926
+scalar GtpNetwork.Host3.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar GtpNetwork.Host3.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar GtpNetwork.Host3.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.Host3.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.Host3.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.Host3.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.Host3.eth[0].mac 	rxPkFromHL:count 	9
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar GtpNetwork.Host3.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar GtpNetwork.Host3.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar GtpNetwork.Host3.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar GtpNetwork.Host3.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar GtpNetwork.Host3.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar GtpNetwork.Host3.eth[0].mac 	passedUpPk:count 	9
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.Host3.eth[0].mac 	passedUpPk:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.Host3.eth[0].mac 	rxPkOk:count 	9
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.Host3.eth[0].mac 	rxPkOk:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.Host3.eth[0].mac 	txPk:count 	9
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar GtpNetwork.Host3.eth[0].mac 	txPk:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.Host3.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar GtpNetwork.Host3.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar GtpNetwork.Host3.eth[0].encap 	decapPk:count 	9
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar GtpNetwork.Host3.eth[0].encap 	decapPk:sum(packetBytes) 	636
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar GtpNetwork.Host3.eth[0].encap 	encapPk:count 	9
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar GtpNetwork.Host3.eth[0].encap 	encapPk:sum(packetBytes) 	636
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar GtpNetwork.router3.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar GtpNetwork.router3.networkLayer.arp 	initiatedResolution:count 	2
+attr title  "ARP initiated resolutions, count"
+scalar GtpNetwork.router3.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar GtpNetwork.router3.networkLayer.arp 	sentReq:count 	2
+attr title  "ARP request sent, count"
+scalar GtpNetwork.router3.eth[0].mac 	"simulated time" 	8.5009868
+scalar GtpNetwork.router3.eth[0].mac 	full-duplex 	1
+scalar GtpNetwork.router3.eth[0].mac 	"frames/sec sent" 	1.0587006204974
+scalar GtpNetwork.router3.eth[0].mac 	"frames/sec rcvd" 	1.0587006204974
+scalar GtpNetwork.router3.eth[0].mac 	"bits/sec sent" 	767.91085006743
+scalar GtpNetwork.router3.eth[0].mac 	"bits/sec rcvd" 	767.91085006743
+scalar GtpNetwork.router3.eth[0].mac 	"rx channel idle (%)" 	99.991643323102
+scalar GtpNetwork.router3.eth[0].mac 	"rx channel utilization (%)" 	0.0083566768977926
+scalar GtpNetwork.router3.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar GtpNetwork.router3.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.router3.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.router3.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[0].mac 	rxPkFromHL:count 	9
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar GtpNetwork.router3.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar GtpNetwork.router3.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar GtpNetwork.router3.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar GtpNetwork.router3.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar GtpNetwork.router3.eth[0].mac 	passedUpPk:count 	9
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.router3.eth[0].mac 	passedUpPk:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[0].mac 	rxPkOk:count 	9
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.router3.eth[0].mac 	rxPkOk:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[0].mac 	txPk:count 	9
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar GtpNetwork.router3.eth[0].mac 	txPk:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar GtpNetwork.router3.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar GtpNetwork.router3.eth[0].encap 	decapPk:count 	9
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar GtpNetwork.router3.eth[0].encap 	decapPk:sum(packetBytes) 	636
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[0].encap 	encapPk:count 	9
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar GtpNetwork.router3.eth[0].encap 	encapPk:sum(packetBytes) 	636
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[1].mac 	"simulated time" 	8.5009868
+scalar GtpNetwork.router3.eth[1].mac 	full-duplex 	1
+scalar GtpNetwork.router3.eth[1].mac 	"frames/sec sent" 	1.0587006204974
+scalar GtpNetwork.router3.eth[1].mac 	"frames/sec rcvd" 	1.0587006204974
+scalar GtpNetwork.router3.eth[1].mac 	"bits/sec sent" 	767.91085006743
+scalar GtpNetwork.router3.eth[1].mac 	"bits/sec rcvd" 	767.91085006743
+scalar GtpNetwork.router3.eth[1].mac 	"rx channel idle (%)" 	99.991643323102
+scalar GtpNetwork.router3.eth[1].mac 	"rx channel utilization (%)" 	0.0083566768977926
+scalar GtpNetwork.router3.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar GtpNetwork.router3.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.router3.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.router3.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[1].mac 	rxPkFromHL:count 	9
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar GtpNetwork.router3.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar GtpNetwork.router3.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar GtpNetwork.router3.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar GtpNetwork.router3.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar GtpNetwork.router3.eth[1].mac 	passedUpPk:count 	9
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.router3.eth[1].mac 	passedUpPk:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[1].mac 	rxPkOk:count 	9
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.router3.eth[1].mac 	rxPkOk:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[1].mac 	txPk:count 	9
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar GtpNetwork.router3.eth[1].mac 	txPk:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar GtpNetwork.router3.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar GtpNetwork.router3.eth[1].encap 	decapPk:count 	9
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar GtpNetwork.router3.eth[1].encap 	decapPk:sum(packetBytes) 	636
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar GtpNetwork.router3.eth[1].encap 	encapPk:count 	9
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar GtpNetwork.router3.eth[1].encap 	encapPk:sum(packetBytes) 	636
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar GtpNetwork.router3.ppp[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GtpNetwork.router3.ppp[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GtpNetwork.router3.ppp[0].queue 	queueingTime:histogram
+field count 16
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-18	16
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar GtpNetwork.router3.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GtpNetwork.router3.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GtpNetwork.router3.ppp[0].queue 	rcvdPk:count 	16
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GtpNetwork.router3.ppp[0].queue 	rcvdPk:sum(packetBytes) 	1216
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GtpNetwork.router3.ppp[0].ppp 	rcvdPkFromHL:count 	16
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GtpNetwork.router3.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	1216
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GtpNetwork.router3.ppp[0].ppp 	txPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar GtpNetwork.router3.ppp[0].ppp 	txPk:sum(packetBytes) 	1328
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.router3.ppp[0].ppp 	txState:timeavg 	0.0001249737265796
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar GtpNetwork.router3.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.router3.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.router3.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.router3.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.router3.ppp[0].ppp 	passedUpPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.router3.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	1216
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.router3.ppp[0].ppp 	rxPkOk:count 	16
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.router3.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	1328
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.Host1.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar GtpNetwork.Host1.networkLayer.arp 	initiatedResolution:count 	1
+attr title  "ARP initiated resolutions, count"
+scalar GtpNetwork.Host1.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar GtpNetwork.Host1.networkLayer.arp 	sentReq:count 	1
+attr title  "ARP request sent, count"
+scalar GtpNetwork.Host1.eth[0].mac 	"simulated time" 	8.5009868
+scalar GtpNetwork.Host1.eth[0].mac 	full-duplex 	1
+scalar GtpNetwork.Host1.eth[0].mac 	"frames/sec sent" 	1.9997678387173
+scalar GtpNetwork.Host1.eth[0].mac 	"frames/sec rcvd" 	1.9997678387173
+scalar GtpNetwork.Host1.eth[0].mac 	"bits/sec sent" 	1475.5933981688
+scalar GtpNetwork.Host1.eth[0].mac 	"bits/sec rcvd" 	1475.5933981688
+scalar GtpNetwork.Host1.eth[0].mac 	"rx channel idle (%)" 	99.983964214602
+scalar GtpNetwork.Host1.eth[0].mac 	"rx channel utilization (%)" 	0.016035785398467
+scalar GtpNetwork.Host1.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar GtpNetwork.Host1.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar GtpNetwork.Host1.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.Host1.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.Host1.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.Host1.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.Host1.eth[0].mac 	rxPkFromHL:count 	17
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar GtpNetwork.Host1.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	1568
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar GtpNetwork.Host1.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar GtpNetwork.Host1.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar GtpNetwork.Host1.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar GtpNetwork.Host1.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar GtpNetwork.Host1.eth[0].mac 	passedUpPk:count 	17
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.Host1.eth[0].mac 	passedUpPk:sum(packetBytes) 	1568
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.Host1.eth[0].mac 	rxPkOk:count 	17
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.Host1.eth[0].mac 	rxPkOk:sum(packetBytes) 	1568
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.Host1.eth[0].mac 	txPk:count 	17
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar GtpNetwork.Host1.eth[0].mac 	txPk:sum(packetBytes) 	1568
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.Host1.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar GtpNetwork.Host1.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar GtpNetwork.Host1.eth[0].encap 	decapPk:count 	17
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar GtpNetwork.Host1.eth[0].encap 	decapPk:sum(packetBytes) 	1244
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar GtpNetwork.Host1.eth[0].encap 	encapPk:count 	17
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar GtpNetwork.Host1.eth[0].encap 	encapPk:sum(packetBytes) 	1244
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar GtpNetwork.Host1.pingApp[0] 	"Pings sent" 	8
+scalar GtpNetwork.Host1.pingApp[0] 	"ping loss rate (%)" 	0
+scalar GtpNetwork.Host1.pingApp[0] 	"ping out-of-order rate (%)" 	0
+scalar GtpNetwork.Host1.pingApp[0] 	pingRxSeq:count 	8
+attr interpolationmode  none
+attr title  "ping rx seq, count"
+scalar GtpNetwork.Host1.pingApp[0] 	pingTxSeq:count 	8
+attr interpolationmode  none
+attr title  "ping tx seq, count"
+scalar GtpNetwork.Host1.pingApp[0] 	numOutOfOrderArrivals:last 	-nan
+attr interpolationmode  none
+attr title  "ping out-of-order arrivals, last"
+scalar GtpNetwork.Host1.pingApp[0] 	numLost:last 	-nan
+attr interpolationmode  none
+attr title  "pings lost, last"
+statistic GtpNetwork.Host1.pingApp[0] 	rtt:histogram
+field count 8
+field mean 0.00119825
+field stddev 9.5176572747712e-05
+field sum 0.009586
+field sqrsum 1.154983456e-05
+field min 0.0011646
+field max 0.0014338
+attr interpolationmode  none
+attr title  "ping round-trip time, histogram"
+attr unit  s
+bin	-INF	0
+bin	0.00103	0
+bin	0.0010479466666667	0
+bin	0.0010658933333333	0
+bin	0.00108384	0
+bin	0.0011017866666667	0
+bin	0.0011197333333333	0
+bin	0.00113768	0
+bin	0.0011556266666667	7
+bin	0.0011735733333333	0
+bin	0.00119152	0
+bin	0.0012094666666667	0
+bin	0.0012274133333333	0
+bin	0.00124536	0
+bin	0.0012633066666667	0
+bin	0.0012812533333333	0
+bin	0.0012992	0
+bin	0.0013171466666667	0
+bin	0.0013350933333333	0
+bin	0.00135304	0
+bin	0.0013709866666667	0
+bin	0.0013889333333333	0
+bin	0.00140688	0
+bin	0.0014248266666667	1
+bin	0.0014427733333333	0
+bin	0.00146072	0
+bin	0.0014786666666667	0
+bin	0.0014966133333333	0
+bin	0.00151456	0
+bin	0.0015325066666667	0
+bin	0.0015504533333333	0
+bin	0.0015684	0
+scalar GtpNetwork.Host1.pingApp[1] 	"Pings sent" 	8
+scalar GtpNetwork.Host1.pingApp[1] 	"ping loss rate (%)" 	0
+scalar GtpNetwork.Host1.pingApp[1] 	"ping out-of-order rate (%)" 	0
+scalar GtpNetwork.Host1.pingApp[1] 	pingRxSeq:count 	8
+attr interpolationmode  none
+attr title  "ping rx seq, count"
+scalar GtpNetwork.Host1.pingApp[1] 	pingTxSeq:count 	8
+attr interpolationmode  none
+attr title  "ping tx seq, count"
+scalar GtpNetwork.Host1.pingApp[1] 	numOutOfOrderArrivals:last 	-nan
+attr interpolationmode  none
+attr title  "ping out-of-order arrivals, last"
+scalar GtpNetwork.Host1.pingApp[1] 	numLost:last 	-nan
+attr interpolationmode  none
+attr title  "pings lost, last"
+statistic GtpNetwork.Host1.pingApp[1] 	rtt:histogram
+field count 8
+field mean 0.001003625
+field stddev 4.7588286373859e-05
+field sum 0.008029
+field sqrsum 8.07395764e-06
+field min 0.0009868
+field max 0.0011214
+attr interpolationmode  none
+attr title  "ping round-trip time, histogram"
+attr unit  s
+bin	-INF	0
+bin	0.0009195	0
+bin	0.00092847333333333	0
+bin	0.00093744666666667	0
+bin	0.00094642	0
+bin	0.00095539333333333	0
+bin	0.00096436666666667	0
+bin	0.00097334	0
+bin	0.00098231333333333	7
+bin	0.00099128666666667	0
+bin	0.00100026	0
+bin	0.0010092333333333	0
+bin	0.0010182066666667	0
+bin	0.00102718	0
+bin	0.0010361533333333	0
+bin	0.0010451266666667	0
+bin	0.0010541	0
+bin	0.0010630733333333	0
+bin	0.0010720466666667	0
+bin	0.00108102	0
+bin	0.0010899933333333	0
+bin	0.0010989666666667	0
+bin	0.00110794	0
+bin	0.0011169133333333	1
+bin	0.0011258866666667	0
+bin	0.00113486	0
+bin	0.0011438333333333	0
+bin	0.0011528066666667	0
+bin	0.00116178	0
+bin	0.0011707533333333	0
+bin	0.0011797266666667	0
+bin	0.0011887	0
+scalar GtpNetwork.pgwStandard3.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar GtpNetwork.pgwStandard3.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar GtpNetwork.pgwStandard3.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar GtpNetwork.pgwStandard3.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar GtpNetwork.pgwStandard3.ppp[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GtpNetwork.pgwStandard3.ppp[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GtpNetwork.pgwStandard3.ppp[0].queue 	queueingTime:histogram
+field count 16
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-18	16
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar GtpNetwork.pgwStandard3.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GtpNetwork.pgwStandard3.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.ppp[0].queue 	rcvdPk:count 	16
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GtpNetwork.pgwStandard3.ppp[0].queue 	rcvdPk:sum(packetBytes) 	1664
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.ppp[0].ppp 	rcvdPkFromHL:count 	16
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GtpNetwork.pgwStandard3.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	1664
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.ppp[0].ppp 	txPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar GtpNetwork.pgwStandard3.ppp[0].ppp 	txPk:sum(packetBytes) 	1776
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.ppp[0].ppp 	txState:timeavg 	0.00016713353795585
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar GtpNetwork.pgwStandard3.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.pgwStandard3.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.pgwStandard3.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.ppp[0].ppp 	passedUpPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.pgwStandard3.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	1664
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.ppp[0].ppp 	rxPkOk:count 	16
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.pgwStandard3.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	1776
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.pppInterface.queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GtpNetwork.pgwStandard3.pppInterface.queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GtpNetwork.pgwStandard3.pppInterface.queue 	queueingTime:histogram
+field count 16
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-18	16
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar GtpNetwork.pgwStandard3.pppInterface.queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GtpNetwork.pgwStandard3.pppInterface.queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.pppInterface.queue 	rcvdPk:count 	16
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GtpNetwork.pgwStandard3.pppInterface.queue 	rcvdPk:sum(packetBytes) 	1216
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.pppInterface.ppp 	rcvdPkFromHL:count 	16
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GtpNetwork.pgwStandard3.pppInterface.ppp 	rcvdPkFromHL:sum(packetBytes) 	1216
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.pppInterface.ppp 	txPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar GtpNetwork.pgwStandard3.pppInterface.ppp 	txPk:sum(packetBytes) 	1328
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.pppInterface.ppp 	txState:timeavg 	0.0001249737265796
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar GtpNetwork.pgwStandard3.pppInterface.ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.pgwStandard3.pppInterface.ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.pppInterface.ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.pgwStandard3.pppInterface.ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.pppInterface.ppp 	passedUpPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.pgwStandard3.pppInterface.ppp 	passedUpPk:sum(packetBytes) 	1216
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.pppInterface.ppp 	rxPkOk:count 	16
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.pgwStandard3.pppInterface.ppp 	rxPkOk:sum(packetBytes) 	1328
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar GtpNetwork.pgwStandard3.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar GtpNetwork.pgwStandard3.udp 	passedUpPk:count 	16
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar GtpNetwork.pgwStandard3.udp 	sentPk:count 	16
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar GtpNetwork.pgwStandard3.udp 	sentPk:sum(packetBytes) 	1344
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard3.udp 	rcvdPk:count 	16
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar GtpNetwork.pgwStandard3.udp 	rcvdPk:sum(packetBytes) 	1344
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar GtpNetwork.pgwStandard1.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar GtpNetwork.pgwStandard1.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar GtpNetwork.pgwStandard1.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar GtpNetwork.pgwStandard1.ppp[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GtpNetwork.pgwStandard1.ppp[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GtpNetwork.pgwStandard1.ppp[0].queue 	queueingTime:histogram
+field count 16
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-18	16
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar GtpNetwork.pgwStandard1.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GtpNetwork.pgwStandard1.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.ppp[0].queue 	rcvdPk:count 	16
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GtpNetwork.pgwStandard1.ppp[0].queue 	rcvdPk:sum(packetBytes) 	1664
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.ppp[0].ppp 	rcvdPkFromHL:count 	16
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GtpNetwork.pgwStandard1.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	1664
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.ppp[0].ppp 	txPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar GtpNetwork.pgwStandard1.ppp[0].ppp 	txPk:sum(packetBytes) 	1776
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.ppp[0].ppp 	txState:timeavg 	0.00016713353795585
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar GtpNetwork.pgwStandard1.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.pgwStandard1.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.pgwStandard1.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.ppp[0].ppp 	passedUpPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.pgwStandard1.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	1664
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.ppp[0].ppp 	rxPkOk:count 	16
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.pgwStandard1.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	1776
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.pppInterface.queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GtpNetwork.pgwStandard1.pppInterface.queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GtpNetwork.pgwStandard1.pppInterface.queue 	queueingTime:histogram
+field count 16
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-18	16
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar GtpNetwork.pgwStandard1.pppInterface.queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GtpNetwork.pgwStandard1.pppInterface.queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.pppInterface.queue 	rcvdPk:count 	16
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GtpNetwork.pgwStandard1.pppInterface.queue 	rcvdPk:sum(packetBytes) 	1216
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.pppInterface.ppp 	rcvdPkFromHL:count 	16
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GtpNetwork.pgwStandard1.pppInterface.ppp 	rcvdPkFromHL:sum(packetBytes) 	1216
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.pppInterface.ppp 	txPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar GtpNetwork.pgwStandard1.pppInterface.ppp 	txPk:sum(packetBytes) 	1328
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.pppInterface.ppp 	txState:timeavg 	0.0001249737265796
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar GtpNetwork.pgwStandard1.pppInterface.ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.pgwStandard1.pppInterface.ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.pppInterface.ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.pgwStandard1.pppInterface.ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.pppInterface.ppp 	passedUpPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.pgwStandard1.pppInterface.ppp 	passedUpPk:sum(packetBytes) 	1216
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.pppInterface.ppp 	rxPkOk:count 	16
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.pgwStandard1.pppInterface.ppp 	rxPkOk:sum(packetBytes) 	1328
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar GtpNetwork.pgwStandard1.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar GtpNetwork.pgwStandard1.udp 	passedUpPk:count 	16
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar GtpNetwork.pgwStandard1.udp 	sentPk:count 	16
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar GtpNetwork.pgwStandard1.udp 	sentPk:sum(packetBytes) 	1344
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard1.udp 	rcvdPk:count 	16
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar GtpNetwork.pgwStandard1.udp 	rcvdPk:sum(packetBytes) 	1344
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar GtpNetwork.router1.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar GtpNetwork.router1.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar GtpNetwork.router1.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar GtpNetwork.router1.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar GtpNetwork.router1.eth[0].mac 	"simulated time" 	8.5009868
+scalar GtpNetwork.router1.eth[0].mac 	full-duplex 	1
+scalar GtpNetwork.router1.eth[0].mac 	"frames/sec sent" 	1.9997678387173
+scalar GtpNetwork.router1.eth[0].mac 	"frames/sec rcvd" 	1.9997678387173
+scalar GtpNetwork.router1.eth[0].mac 	"bits/sec sent" 	1475.5933981688
+scalar GtpNetwork.router1.eth[0].mac 	"bits/sec rcvd" 	1475.5933981688
+scalar GtpNetwork.router1.eth[0].mac 	"rx channel idle (%)" 	99.983964214602
+scalar GtpNetwork.router1.eth[0].mac 	"rx channel utilization (%)" 	0.016035785398467
+scalar GtpNetwork.router1.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar GtpNetwork.router1.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar GtpNetwork.router1.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.router1.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.router1.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.router1.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.router1.eth[0].mac 	rxPkFromHL:count 	17
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar GtpNetwork.router1.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	1568
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar GtpNetwork.router1.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar GtpNetwork.router1.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar GtpNetwork.router1.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar GtpNetwork.router1.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar GtpNetwork.router1.eth[0].mac 	passedUpPk:count 	17
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.router1.eth[0].mac 	passedUpPk:sum(packetBytes) 	1568
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.router1.eth[0].mac 	rxPkOk:count 	17
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.router1.eth[0].mac 	rxPkOk:sum(packetBytes) 	1568
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.router1.eth[0].mac 	txPk:count 	17
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar GtpNetwork.router1.eth[0].mac 	txPk:sum(packetBytes) 	1568
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.router1.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar GtpNetwork.router1.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar GtpNetwork.router1.eth[0].encap 	decapPk:count 	17
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar GtpNetwork.router1.eth[0].encap 	decapPk:sum(packetBytes) 	1244
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar GtpNetwork.router1.eth[0].encap 	encapPk:count 	17
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar GtpNetwork.router1.eth[0].encap 	encapPk:sum(packetBytes) 	1244
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar GtpNetwork.router1.ppp[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GtpNetwork.router1.ppp[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GtpNetwork.router1.ppp[0].queue 	queueingTime:histogram
+field count 16
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-18	16
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar GtpNetwork.router1.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GtpNetwork.router1.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GtpNetwork.router1.ppp[0].queue 	rcvdPk:count 	16
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GtpNetwork.router1.ppp[0].queue 	rcvdPk:sum(packetBytes) 	1216
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GtpNetwork.router1.ppp[0].ppp 	rcvdPkFromHL:count 	16
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GtpNetwork.router1.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	1216
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GtpNetwork.router1.ppp[0].ppp 	txPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar GtpNetwork.router1.ppp[0].ppp 	txPk:sum(packetBytes) 	1328
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.router1.ppp[0].ppp 	txState:timeavg 	0.0001249737265796
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar GtpNetwork.router1.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.router1.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.router1.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.router1.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.router1.ppp[0].ppp 	passedUpPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.router1.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	1216
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.router1.ppp[0].ppp 	rxPkOk:count 	16
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.router1.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	1328
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar GtpNetwork.coreNetwork.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar GtpNetwork.coreNetwork.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar GtpNetwork.coreNetwork.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar GtpNetwork.coreNetwork.ppp[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GtpNetwork.coreNetwork.ppp[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GtpNetwork.coreNetwork.ppp[0].queue 	queueingTime:histogram
+field count 16
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-18	16
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar GtpNetwork.coreNetwork.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GtpNetwork.coreNetwork.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[0].queue 	rcvdPk:count 	16
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GtpNetwork.coreNetwork.ppp[0].queue 	rcvdPk:sum(packetBytes) 	1664
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[0].ppp 	rcvdPkFromHL:count 	16
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GtpNetwork.coreNetwork.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	1664
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[0].ppp 	txPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar GtpNetwork.coreNetwork.ppp[0].ppp 	txPk:sum(packetBytes) 	1776
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[0].ppp 	txState:timeavg 	0.00016713353795585
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar GtpNetwork.coreNetwork.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.coreNetwork.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.coreNetwork.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[0].ppp 	passedUpPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.coreNetwork.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	1664
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[0].ppp 	rxPkOk:count 	16
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.coreNetwork.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	1776
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[1].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GtpNetwork.coreNetwork.ppp[1].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GtpNetwork.coreNetwork.ppp[1].queue 	queueingTime:histogram
+field count 16
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-18	16
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar GtpNetwork.coreNetwork.ppp[1].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GtpNetwork.coreNetwork.ppp[1].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[1].queue 	rcvdPk:count 	16
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GtpNetwork.coreNetwork.ppp[1].queue 	rcvdPk:sum(packetBytes) 	1664
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[1].ppp 	rcvdPkFromHL:count 	16
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GtpNetwork.coreNetwork.ppp[1].ppp 	rcvdPkFromHL:sum(packetBytes) 	1664
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[1].ppp 	txPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar GtpNetwork.coreNetwork.ppp[1].ppp 	txPk:sum(packetBytes) 	1776
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[1].ppp 	txState:timeavg 	0.00016713353795585
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar GtpNetwork.coreNetwork.ppp[1].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.coreNetwork.ppp[1].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[1].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.coreNetwork.ppp[1].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[1].ppp 	passedUpPk:count 	16
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.coreNetwork.ppp[1].ppp 	passedUpPk:sum(packetBytes) 	1664
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[1].ppp 	rxPkOk:count 	16
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.coreNetwork.ppp[1].ppp 	rxPkOk:sum(packetBytes) 	1776
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[2].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GtpNetwork.coreNetwork.ppp[2].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GtpNetwork.coreNetwork.ppp[2].queue 	queueingTime:histogram
+field count 8
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-18	8
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar GtpNetwork.coreNetwork.ppp[2].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GtpNetwork.coreNetwork.ppp[2].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[2].queue 	rcvdPk:count 	8
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GtpNetwork.coreNetwork.ppp[2].queue 	rcvdPk:sum(packetBytes) 	832
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[2].ppp 	rcvdPkFromHL:count 	8
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GtpNetwork.coreNetwork.ppp[2].ppp 	rcvdPkFromHL:sum(packetBytes) 	832
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[2].ppp 	txPk:count 	8
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar GtpNetwork.coreNetwork.ppp[2].ppp 	txPk:sum(packetBytes) 	888
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[2].ppp 	txState:timeavg 	8.3566768977926e-05
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar GtpNetwork.coreNetwork.ppp[2].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.coreNetwork.ppp[2].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[2].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.coreNetwork.ppp[2].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[2].ppp 	passedUpPk:count 	8
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.coreNetwork.ppp[2].ppp 	passedUpPk:sum(packetBytes) 	832
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.coreNetwork.ppp[2].ppp 	rxPkOk:count 	8
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.coreNetwork.ppp[2].ppp 	rxPkOk:sum(packetBytes) 	888
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar GtpNetwork.pgwStandard2.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar GtpNetwork.pgwStandard2.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar GtpNetwork.pgwStandard2.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar GtpNetwork.pgwStandard2.ppp[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GtpNetwork.pgwStandard2.ppp[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GtpNetwork.pgwStandard2.ppp[0].queue 	queueingTime:histogram
+field count 8
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-18	8
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar GtpNetwork.pgwStandard2.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GtpNetwork.pgwStandard2.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.ppp[0].queue 	rcvdPk:count 	8
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GtpNetwork.pgwStandard2.ppp[0].queue 	rcvdPk:sum(packetBytes) 	832
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.ppp[0].ppp 	rcvdPkFromHL:count 	8
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GtpNetwork.pgwStandard2.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	832
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.ppp[0].ppp 	txPk:count 	8
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar GtpNetwork.pgwStandard2.ppp[0].ppp 	txPk:sum(packetBytes) 	888
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.ppp[0].ppp 	txState:timeavg 	8.3566768977926e-05
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar GtpNetwork.pgwStandard2.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.pgwStandard2.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.pgwStandard2.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.ppp[0].ppp 	passedUpPk:count 	8
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.pgwStandard2.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	832
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.ppp[0].ppp 	rxPkOk:count 	8
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.pgwStandard2.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	888
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.pppInterface.queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GtpNetwork.pgwStandard2.pppInterface.queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GtpNetwork.pgwStandard2.pppInterface.queue 	queueingTime:histogram
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-18	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar GtpNetwork.pgwStandard2.pppInterface.queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GtpNetwork.pgwStandard2.pppInterface.queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.pppInterface.queue 	rcvdPk:count 	0
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GtpNetwork.pgwStandard2.pppInterface.queue 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.pppInterface.ppp 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GtpNetwork.pgwStandard2.pppInterface.ppp 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.pppInterface.ppp 	txPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar GtpNetwork.pgwStandard2.pppInterface.ppp 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.pppInterface.ppp 	txState:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar GtpNetwork.pgwStandard2.pppInterface.ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.pgwStandard2.pppInterface.ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.pppInterface.ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.pgwStandard2.pppInterface.ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.pppInterface.ppp 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.pgwStandard2.pppInterface.ppp 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.pppInterface.ppp 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.pgwStandard2.pppInterface.ppp 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar GtpNetwork.pgwStandard2.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar GtpNetwork.pgwStandard2.udp 	passedUpPk:count 	8
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar GtpNetwork.pgwStandard2.udp 	sentPk:count 	8
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar GtpNetwork.pgwStandard2.udp 	sentPk:sum(packetBytes) 	672
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar GtpNetwork.pgwStandard2.udp 	rcvdPk:count 	8
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar GtpNetwork.pgwStandard2.udp 	rcvdPk:sum(packetBytes) 	672
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar GtpNetwork.router2.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar GtpNetwork.router2.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar GtpNetwork.router2.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar GtpNetwork.router2.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar GtpNetwork.router2.eth[0].mac 	"simulated time" 	8.5009868
+scalar GtpNetwork.router2.eth[0].mac 	full-duplex 	1
+scalar GtpNetwork.router2.eth[0].mac 	"frames/sec sent" 	0
+scalar GtpNetwork.router2.eth[0].mac 	"frames/sec rcvd" 	0
+scalar GtpNetwork.router2.eth[0].mac 	"bits/sec sent" 	0
+scalar GtpNetwork.router2.eth[0].mac 	"bits/sec rcvd" 	0
+scalar GtpNetwork.router2.eth[0].mac 	"rx channel idle (%)" 	100
+scalar GtpNetwork.router2.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar GtpNetwork.router2.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar GtpNetwork.router2.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar GtpNetwork.router2.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.router2.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.router2.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.router2.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.router2.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar GtpNetwork.router2.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar GtpNetwork.router2.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar GtpNetwork.router2.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar GtpNetwork.router2.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar GtpNetwork.router2.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar GtpNetwork.router2.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.router2.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.router2.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.router2.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.router2.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar GtpNetwork.router2.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.router2.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar GtpNetwork.router2.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar GtpNetwork.router2.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar GtpNetwork.router2.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar GtpNetwork.router2.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar GtpNetwork.router2.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar GtpNetwork.router2.ppp[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar GtpNetwork.router2.ppp[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic GtpNetwork.router2.ppp[0].queue 	queueingTime:histogram
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-18	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar GtpNetwork.router2.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar GtpNetwork.router2.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar GtpNetwork.router2.ppp[0].queue 	rcvdPk:count 	0
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar GtpNetwork.router2.ppp[0].queue 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar GtpNetwork.router2.ppp[0].ppp 	rcvdPkFromHL:count 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar GtpNetwork.router2.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar GtpNetwork.router2.ppp[0].ppp 	txPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar GtpNetwork.router2.ppp[0].ppp 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.router2.ppp[0].ppp 	txState:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar GtpNetwork.router2.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.router2.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.router2.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.router2.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.router2.ppp[0].ppp 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.router2.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.router2.ppp[0].ppp 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.router2.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.Host2.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar GtpNetwork.Host2.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar GtpNetwork.Host2.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar GtpNetwork.Host2.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar GtpNetwork.Host2.eth[0].mac 	"simulated time" 	8.5009868
+scalar GtpNetwork.Host2.eth[0].mac 	full-duplex 	1
+scalar GtpNetwork.Host2.eth[0].mac 	"frames/sec sent" 	0
+scalar GtpNetwork.Host2.eth[0].mac 	"frames/sec rcvd" 	0
+scalar GtpNetwork.Host2.eth[0].mac 	"bits/sec sent" 	0
+scalar GtpNetwork.Host2.eth[0].mac 	"bits/sec rcvd" 	0
+scalar GtpNetwork.Host2.eth[0].mac 	"rx channel idle (%)" 	100
+scalar GtpNetwork.Host2.eth[0].mac 	"rx channel utilization (%)" 	0
+scalar GtpNetwork.Host2.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar GtpNetwork.Host2.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar GtpNetwork.Host2.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.Host2.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.Host2.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.Host2.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.Host2.eth[0].mac 	rxPkFromHL:count 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar GtpNetwork.Host2.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar GtpNetwork.Host2.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar GtpNetwork.Host2.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar GtpNetwork.Host2.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar GtpNetwork.Host2.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar GtpNetwork.Host2.eth[0].mac 	passedUpPk:count 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.Host2.eth[0].mac 	passedUpPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.Host2.eth[0].mac 	rxPkOk:count 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.Host2.eth[0].mac 	rxPkOk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.Host2.eth[0].mac 	txPk:count 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar GtpNetwork.Host2.eth[0].mac 	txPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.Host2.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar GtpNetwork.Host2.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar GtpNetwork.Host2.eth[0].encap 	decapPk:count 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar GtpNetwork.Host2.eth[0].encap 	decapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar GtpNetwork.Host2.eth[0].encap 	encapPk:count 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar GtpNetwork.Host2.eth[0].encap 	encapPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar GtpNetwork.Host4.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar GtpNetwork.Host4.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar GtpNetwork.Host4.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar GtpNetwork.Host4.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar GtpNetwork.Host4.eth[0].mac 	"simulated time" 	8.5009868
+scalar GtpNetwork.Host4.eth[0].mac 	full-duplex 	1
+scalar GtpNetwork.Host4.eth[0].mac 	"frames/sec sent" 	1.0587006204974
+scalar GtpNetwork.Host4.eth[0].mac 	"frames/sec rcvd" 	1.0587006204974
+scalar GtpNetwork.Host4.eth[0].mac 	"bits/sec sent" 	767.91085006743
+scalar GtpNetwork.Host4.eth[0].mac 	"bits/sec rcvd" 	767.91085006743
+scalar GtpNetwork.Host4.eth[0].mac 	"rx channel idle (%)" 	99.991643323102
+scalar GtpNetwork.Host4.eth[0].mac 	"rx channel utilization (%)" 	0.0083566768977926
+scalar GtpNetwork.Host4.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar GtpNetwork.Host4.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar GtpNetwork.Host4.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar GtpNetwork.Host4.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar GtpNetwork.Host4.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar GtpNetwork.Host4.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar GtpNetwork.Host4.eth[0].mac 	rxPkFromHL:count 	9
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar GtpNetwork.Host4.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar GtpNetwork.Host4.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar GtpNetwork.Host4.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar GtpNetwork.Host4.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar GtpNetwork.Host4.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar GtpNetwork.Host4.eth[0].mac 	passedUpPk:count 	9
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar GtpNetwork.Host4.eth[0].mac 	passedUpPk:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar GtpNetwork.Host4.eth[0].mac 	rxPkOk:count 	9
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar GtpNetwork.Host4.eth[0].mac 	rxPkOk:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar GtpNetwork.Host4.eth[0].mac 	txPk:count 	9
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar GtpNetwork.Host4.eth[0].mac 	txPk:sum(packetBytes) 	816
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar GtpNetwork.Host4.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar GtpNetwork.Host4.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar GtpNetwork.Host4.eth[0].encap 	decapPk:count 	9
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar GtpNetwork.Host4.eth[0].encap 	decapPk:sum(packetBytes) 	636
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar GtpNetwork.Host4.eth[0].encap 	encapPk:count 	9
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar GtpNetwork.Host4.eth[0].encap 	encapPk:sum(packetBytes) 	636
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
