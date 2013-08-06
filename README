@@ -22,6 +22,14 @@ Directors for 4Gsim:
      headerserializers/     serialize/parse methods for INET and 4G protocols
      subscriber/            classes for subscriber, PDN connection and Bearer context
      
+     
+New: user plane
+
+ examples/
+   gtpNetwork/              Examples of GTP peers data flow and LTE-EPC network
+ src/
+   epc/                     User Traffic Management
+     gtp/                   GTP-U
  
 
 INET Framework for OMNEST/OMNeT++ 4.2
