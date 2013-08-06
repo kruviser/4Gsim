@@ -3,9 +3,23 @@
 
 #include "IPvXAddress.h"
 #include <map>
+#include <list>
+
+
+enum EpcNodeType
+{
+    ENB ,
+    PGW ,
+    SGW
+};
 
 #define LOCAL_ADDRESS_TEID 127
 
+#define UNSPECIFIED_PORT 65536
+
+#define UNSPECIFIED_TFT 65536
+
+//===================== GTP-U tunnel management =====================
 struct ConnectionInfo
 {
     ConnectionInfo(unsigned int id, IPvXAddress hop): teid(id) , nextHop(hop){}
@@ -14,24 +28,45 @@ struct ConnectionInfo
     IPvXAddress nextHop;
 };
 
-// extend the filter to the other elements of the IP 4-tuple
-// We recall that: in order to use a structure as key of a std::map we need to redefine the lessThan operator (or something like that)
-struct TrafficFilterTemplate
-{
-    TrafficFilterTemplate(IPvXAddress dest) : destAddr(dest) {}
-    //IPvXAddress srcAddr;
-    IPvXAddress destAddr;
+typedef std::map<unsigned int,ConnectionInfo> LabelTable;
+//===================================================================
 
-    //unsigned int srcPort;
-    //unsigned int destPort;
+
+
+//=================== Traffic filters management ====================
+// identifies a traffic flow template
+typedef unsigned int TrafficFlowTemplateId;
+
+struct TrafficFlowTemplate
+{
+    TrafficFlowTemplate( IPvXAddress ad , unsigned int src , unsigned int dest ) : addr(ad) , srcPort(src) , destPort(dest) {};
+
+    IPvXAddress addr;
+
+    unsigned int srcPort;
+    unsigned int destPort;
+
+    TrafficFlowTemplateId tftId;
+
+    bool operator==(const TrafficFlowTemplate & b)
+    {
+        if( (b.addr==addr) && (b.srcPort==srcPort) && (b.destPort==destPort) )
+            return true;
+        else
+            return false;
+    }
 };
 
-typedef std::map<unsigned int,ConnectionInfo> LabelTable;
+// contains a list of traffic flow templates associated to a src/dest address. It is used By the Traffic Flow Filter
+typedef std::list<TrafficFlowTemplate> TrafficFilterTemplateList;
 
-// TODO udpdate the definition of TrafficFilterTemplateTable in order to use the TrafficFilterTemplate structure
-//typedef std::map<TrafficFilterTemplate,unsigned int> TrafficFilterTemplateTable;
-typedef std::map<IPvXAddress,unsigned int> TrafficFilterTemplateTable;
+typedef std::map<IPvXAddress,TrafficFilterTemplateList> TrafficFilterTemplateTable;
+//===================================================================
+
 
 char * const * loadXmlTable(char const * attributes[] , unsigned int numAttributes);
+
+
+
 
 #endif

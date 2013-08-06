@@ -25,12 +25,27 @@ void TrafficFlowFilter::initialize(int stage)
     // wait until all the IP addresses are configured
     if ( stage!=3 )
         return;
+
+    // reading and setting owner type
+    ownerType_ = selectOwnerType(par("ownerType"));
+
     //============= Reading XML files =============
     const char *filename = par("filterFileName");
     if (filename == NULL || (!strcmp(filename, "")))
         error("TrafficFlowFilter::initialize - Error reading configuration from file %s", filename);
     loadFilterTable(filename);
     //=============================================
+}
+
+EpcNodeType TrafficFlowFilter::selectOwnerType(const char * type)
+{
+    EV << "TrafficFlowFilter::selectOwnerType - setting owner type to " << type << endl;
+    if(strcmp(type,"ENB") == 0)
+        return ENB;
+    else if(strcmp(type,"PGW") == 0)
+        return PGW;
+
+    error("TrafficFlowFilter::selectOwnerType - unknown owner type [%s]. Aborting...",type);
 }
 
 void TrafficFlowFilter::handleMessage(cMessage *msg)
@@ -42,19 +57,32 @@ void TrafficFlowFilter::handleMessage(cMessage *msg)
     IPv4Datagram * datagram = check_and_cast<IPv4Datagram *>(msg);
     IPv4Address &destAddr = datagram->getDestAddress();
     IPv4Address &srcAddr = datagram->getSrcAddress();
+    IPv4Address primaryKey , secondaryKeyAddr;
 
-    EV << "Received datagram : " << datagram->getName() << " - src[" << destAddr << "] - dest[" << srcAddr << "]\n";
+    EV << "TrafficFlowFilter::handleMessage - Received datagram : " << datagram->getName() << " - src[" << destAddr << "] - dest[" << srcAddr << "]\n";
 
     // run packet filter and associate a flowId to the connection (default bearer?)
     // search within tftTable the proper entry for this destination
-    TrafficFilterTemplateTable::iterator tftIt;
-    tftIt = filterTable_.find(destAddr);
-    if(tftIt==filterTable_.end())
+
+    // check the ownerType and create the primary and secondary key consequently
+    if(ownerType_==PGW)
     {
-        EV << "TrafficFlowFilter::handleMessage - Cannot find entry for destAddress " << destAddr << ". Discarding packet;" << endl;
-        return;
+        primaryKey = destAddr;
+        secondaryKeyAddr = srcAddr;
     }
-    unsigned int tftId = tftIt->second; // this is the flow identifier
+    else//(ownerType_==ENB)
+    {
+        primaryKey = srcAddr;
+        secondaryKeyAddr = destAddr;
+    }
+
+    // TODO decide whether specifying src and dest ports or not
+    TrafficFlowTemplate secondaryKey( secondaryKeyAddr , UNSPECIFIED_PORT , UNSPECIFIED_PORT );
+
+    // search for the tftId in the table
+    unsigned int tftId = findTrafficFlow( primaryKey , secondaryKey );
+    if(tftId == UNSPECIFIED_TFT)
+        error("TrafficFlowFilter::handleMessage - Cannot find corresponding tftId. Aborting...");
 
     // add control info to the normal ip datagram. This info will be read by the GTP-U application
     TftControlInfo * tftInfo = new TftControlInfo();
@@ -65,6 +93,60 @@ void TrafficFlowFilter::handleMessage(cMessage *msg)
 
     // send the datagram to the GTP-U module
     send(datagram,"gtpUserGateOut");
+}
+
+
+
+TrafficFlowTemplateId TrafficFlowFilter::findTrafficFlow(IPvXAddress firstKey , TrafficFlowTemplate secondKey)
+{
+    TrafficFilterTemplateTable::iterator tftIt;
+    tftIt = filterTable_.find(firstKey);
+
+    // if no entry found
+    if( tftIt==filterTable_.end() )
+    {
+       EV << "TrafficFlowFilter::findTrafficFlow - Cannot find tft list for destAddress " << firstKey << "." << endl;
+       return UNSPECIFIED_TFT;
+    }
+
+    // obtain the filter list associated to the given address
+    TrafficFilterTemplateList & filterList = tftIt->second;
+
+    // search for the second key within the list
+    TrafficFilterTemplateList::iterator templIt = filterList.begin() ,
+                                        templEt = filterList.end()   ;
+
+    for( ; templIt != templEt ; templIt++ )
+    {
+        if( (*templIt)==secondKey )
+            return templIt->tftId;
+    }
+
+    EV << "TrafficFlowFilter::findTrafficFlow - Cannot find entry for destAddress " << firstKey << " and values: ["
+       <<  secondKey.addr << "," <<  secondKey.destPort << ","<< secondKey.srcPort << "]" << endl;
+
+    return UNSPECIFIED_TFT;
+}
+
+
+bool TrafficFlowFilter::addTrafficFlow( IPvXAddress firstKey , TrafficFlowTemplate tft )
+{
+    EV << "TrafficFlowFilter::addTrafficFlow - checking existence of an entry for destAddress " << firstKey << " and values: ["
+       <<  tft.addr << "," <<  tft.destPort << ","<< tft.srcPort << "]" << endl;
+
+    // check if an entry for the given keys already exists
+    TrafficFlowTemplateId ret= findTrafficFlow(firstKey,tft);
+    if( ret ==! UNSPECIFIED_TFT )
+    {
+        EV << "TrafficFlowFilter::addTrafficFlow - skipping duplicate entry  with destAddress " << firstKey << " and values: ["
+           <<  tft.addr << "," <<  tft.destPort << ","<< tft.srcPort << "]" << endl;
+        return false;
+    }
+
+    filterTable_[firstKey].push_back(tft);
+
+    EV << "TrafficFlowFilter::addTrafficFlow - inserted entry: destAddr[" << firstKey <<"] - TFT[" << tft.tftId <<"]" << endl;
+    return true;
 }
 
 void TrafficFlowFilter::loadFilterTable(const char * filterTableFile)
@@ -82,14 +164,18 @@ void TrafficFlowFilter::loadFilterTable(const char * filterTableFile)
 
     cXMLElementList tftList = filterNode->getChildren();
 
-    IPvXAddress destAddr;
+    // create default entries
+    IPvXAddress destAddr("0.0.0.0"), srcAddr("0.0.0.0");
+    unsigned int destPort = UNSPECIFIED_PORT;
+    unsigned int srcPort = UNSPECIFIED_PORT;
 
     unsigned int tftId;
+    IPvXAddress primaryKey, secondaryKeyAddr;
 
     // tft attributes management
-    const unsigned int numAttributes = 3;
-    char const * attributes[numAttributes] = { "destAddr" , "tftId" , "destName" };
-    enum attributes                          { DEST_ADDR  , TFT_ID  , DEST_NAME } ;
+    const unsigned int numAttributes = 7;
+    char const * attributes[numAttributes] = { "destAddr" , "tftId" , "destName" , "srcAddr" , "srcName" , "srcPort" , "destPort" };
+    enum attributes                          { DEST_ADDR  , TFT_ID  , DEST_NAME  , SRC_ADDR  , SRC_NAME  , SRC_PORT  , DEST_PORT  };
 
     // attribute iterator
     unsigned int attrId = 0;
@@ -107,6 +193,7 @@ void TrafficFlowFilter::loadFilterTable(const char * filterTableFile)
             for( attrId = 0 ; attrId<numAttributes ; ++attrId)
                 temp[attrId] = NULL;
 
+            // read each attribute into the temp vector
             for( attrId = 0 ; attrId<numAttributes ; ++attrId)
             {
                 temp[attrId] = (*tftIt)->getAttribute(attributes[attrId]);
@@ -124,7 +211,18 @@ void TrafficFlowFilter::loadFilterTable(const char * filterTableFile)
             else
                 tftId = atoi(temp[TFT_ID]);
 
-            // at least one between destAddr and destName MUST be specified
+            // read src and dest port values
+            if(temp[DEST_PORT]!=NULL)
+                destPort = atoi(temp[DEST_PORT]);
+            if(temp[SRC_PORT]!=NULL)
+                srcPort = atoi(temp[SRC_PORT]);
+
+            //===================== Source and Destination addresses management =====================
+            // NOTE that the behavior of this part depends on the node type of trafficFlowFilter owner:
+            // - in case of ENB, the filterTable will be indexed by srcAddr at the first level. Thus srcAddress or srcName fields are mandatory
+            // - in case of PGW, the filterTable will be indexed by destAddr at the first level. Thus destAddress or destName fields are mandatory
+
+            // at least one between destAddr and destName MUST be specified in case of PGW
             // try to read the destination address for first
             if(temp[DEST_ADDR]!=NULL)
                 destAddr.set(temp[DEST_ADDR]);
@@ -135,16 +233,47 @@ void TrafficFlowFilter::loadFilterTable(const char * filterTableFile)
                     EV << "TrafficFlowFilter::loadFilterTable - resolving IP address for host name " << temp[DEST_NAME] << endl;
                     destAddr = IPvXAddressResolver().resolve(temp[DEST_NAME]);
                 }
-                else
-                    error("TrafficFlowFilter::loadFilterTable - unable to resolve any address for tftID[%i]",tftId);
+                else if(ownerType_==PGW)
+                    error("TrafficFlowFilter::loadFilterTable - unable to resolve any address for tftID[%i] in PGW.",tftId);
             }
 
-            std::pair<TrafficFilterTemplateTable::iterator,bool> ret;
-            ret = filterTable_.insert(std::pair<IPvXAddress,unsigned int>(destAddr,tftId));
-            if (ret.second==false)
-              EV << "TrafficFlowFilter::loadFilterTable - skipping duplicate entry  with destAddr "<<  ret.first->first << '\n';
+            // at least one between srcAddr and srcName MUST be specified in case of ENB
+            // try to read the source address for first
+            if(temp[SRC_ADDR]!=NULL)
+                srcAddr.set(temp[SRC_ADDR]);
+            else // if no src address has been specified, try to resolve node name
+            {
+                if(temp[SRC_NAME]!=NULL)
+                {
+                    EV << "TrafficFlowFilter::loadFilterTable - resolving IP address for host name " << temp[SRC_NAME] << endl;
+                    srcAddr = IPvXAddressResolver().resolve(temp[SRC_NAME]);
+                }
+                else if(ownerType_==ENB)
+                    error("TrafficFlowFilter::loadFilterTable - unable to resolve any address for tftID[%i] in ENB",tftId);
+            }
+
+            // check the owner type, and choose the primary and secondary key values accordingly
+            if(ownerType_==ENB)
+            {
+                primaryKey = srcAddr;
+                secondaryKeyAddr = destAddr;
+            }
+            else // (ownerType_==PGW)
+            {
+                primaryKey = destAddr;
+                secondaryKeyAddr = srcAddr;
+            }
+
+
+            // create the new entry...finally
+            TrafficFlowTemplate secondaryKey( secondaryKeyAddr , destPort , srcPort );
+            secondaryKey.tftId = tftId;
+
+            // TODO decide what to do in case of duplicate entries
+            if( !addTrafficFlow(primaryKey,secondaryKey) )
+                ;
             else
-                EV << "TrafficFlowFilter::loadFilterTable - inserted entry: destAddr[" << destAddr <<"] - TFT[" << tftId <<"]" << endl;
+                ;
         }
     }
 }

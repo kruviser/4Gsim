@@ -24,6 +24,7 @@ simple TrafficFlowFilter
     	@display("i=block/filter");
     	
     	string filterFileName;
+    	string ownerType; // must be one between ENB or PGW 
 	gates:
 	    input internetFilterGateIn;
 	    

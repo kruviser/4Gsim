@@ -34,15 +34,18 @@
 	<!-- from destination address to tftIdentifier -->
 	<filterTable>
 		<filter
-			destName   ="InternetHost"
+			destName   = "InternetHost"
+			srcName    = "UE1"
 			tftId      = "11"     
 		/>
 		<filter
-			destName   ="UE2"
+			destName   = "UE2"
+			srcName    = "UE1"
 			tftId      = "4"     
 		/>
 		<filter
-			destName   ="UE3"
+			destName   = "UE3"
+			srcName    = "UE1"
 			tftId      = "5"     
 		/>
 	</filterTable>

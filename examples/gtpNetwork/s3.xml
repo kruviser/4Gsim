@@ -29,10 +29,17 @@
 	<filterTable>
 		<filter
 			destName   ="Host1"
+			srcName	   ="Host3"
+			tftId      = "11"     
+		/>
+		<filter
+			destName   ="Host1"
+			srcName	   ="Host4"
 			tftId      = "11"     
 		/>
 		<filter
 			destName   ="Host2"
+			srcName	   ="Host3"
 			tftId      = "12"     
 		/>
 	</filterTable>

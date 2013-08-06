@@ -23,8 +23,14 @@
 
 
 /**
- * The traffic filter uses a TrafficFilterTemplateTable that maps destrination address to TFT identifiers
- * This table is specified via (part of) a XML configuration file
+ * The traffic filter uses a TrafficFilterTemplateTable that maps IP 4-Tuples to TFT identifiers.
+ * The TrafficFilterTemplateTable has two levels:
+ *  - at the first level there up to one entry for each IPvXAddress. This may be a destination (on the P-GW side) or source (on the eNB side) address
+ *  - at the second level each entry is a list of TrafficFlowTemplates structures, with a src/dest address (depending on the first level key,
+ *    a dest and src port, and a tftId;
+ *
+ * This table is specified via (part of) a XML configuration file. Note that the fields of the TrafficFlowTemplates (except for the tftId) may
+ * be left unspecified
  *
  * Example format for traffic filter XML configuration
     </config>
@@ -47,17 +53,29 @@
  */
 class TrafficFlowFilter : public cSimpleModule
 {
+    // specifies the type of the node that contains this filter (it can be ENB or PGW
+    // the filterTable_ will be indexed differently depending on this parameter
+    EpcNodeType ownerType_;
+
+    // gate for connecting with the GTP-U module
     cGate * gtpUserGate_;
 
     TrafficFilterTemplateTable filterTable_;
 
     void loadFilterTable(const char * filterTableFile);
+
+    EpcNodeType selectOwnerType(const char * type);
   protected:
     virtual int numInitStages() const {return 4;}
     virtual void initialize(int stage);
 
     // TrafficFlowFilter module may receive messages only from the input interface of its compound module
     virtual void handleMessage(cMessage *msg);
+
+    // manage filter table
+    TrafficFlowTemplateId findTrafficFlow(IPvXAddress firstKey , TrafficFlowTemplate secondKey );
+    bool addTrafficFlow( IPvXAddress firstKey , TrafficFlowTemplate tft);
+
 };
 
 #endif

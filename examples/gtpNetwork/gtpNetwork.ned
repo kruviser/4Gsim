@@ -51,9 +51,11 @@ network GtpNetwork
             @display("p=89,121");
         }
         pgwStandard3: pgwStandard {
+            nodeType = "PGW";
             @display("p=551,374;i=device/mainframe");
         }
         pgwStandard1: pgwStandard {
+            nodeType = "PGW";
             @display("p=89,374");
         }
         router1: Router {
@@ -63,6 +65,7 @@ network GtpNetwork
             @display("p=313,488");
         }
         pgwStandard2: pgwStandard {
+            nodeType = "PGW";
             @display("p=313,374");
         }
         router2: Router {
