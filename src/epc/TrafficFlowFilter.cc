@@ -40,7 +40,7 @@ void TrafficFlowFilter::initialize(int stage)
 EpcNodeType TrafficFlowFilter::selectOwnerType(const char * type)
 {
     EV << "TrafficFlowFilter::selectOwnerType - setting owner type to " << type << endl;
-    if(strcmp(type,"ENB") == 0)
+    if(strcmp(type,"ENODEB") == 0)
         return ENB;
     else if(strcmp(type,"PGW") == 0)
         return PGW;
@@ -57,6 +57,9 @@ void TrafficFlowFilter::handleMessage(cMessage *msg)
     IPv4Datagram * datagram = check_and_cast<IPv4Datagram *>(msg);
     IPv4Address &destAddr = datagram->getDestAddress();
     IPv4Address &srcAddr = datagram->getSrcAddress();
+
+    // TODO check for source and dest port number
+
     IPv4Address primaryKey , secondaryKeyAddr;
 
     EV << "TrafficFlowFilter::handleMessage - Received datagram : " << datagram->getName() << " - src[" << destAddr << "] - dest[" << srcAddr << "]\n";
@@ -114,9 +117,29 @@ TrafficFlowTemplateId TrafficFlowFilter::findTrafficFlow(IPvXAddress firstKey , 
 
     // search for the second key within the list
     TrafficFilterTemplateList::iterator templIt = filterList.begin() ,
+                                        templFirst = filterList.begin() ,
                                         templEt = filterList.end()   ;
 
-    for( ; templIt != templEt ; templIt++ )
+    // try searching for the full entry (src-dest addresses and ports)
+    for( templIt = templFirst ; templIt != templEt ; templIt++ )
+    {
+        if( (*templIt)==secondKey )
+            return templIt->tftId;
+    }
+    EV << "TrafficFlowFilter::findTrafficFlow - Cannot find entry for the 4-tuple. Now trying with src and dest addresses" << endl;
+
+    // if no result is found, try leaving port fields unspecified
+    secondKey.srcPort = secondKey.destPort = UNSPECIFIED_PORT;
+    for( templIt = templFirst ; templIt != templEt ; templIt++ )
+    {
+        if( (*templIt)==secondKey )
+            return templIt->tftId;
+    }
+    EV << "TrafficFlowFilter::findTrafficFlow - Cannot find entry for src and dest addresses. Now trying with first key only" << endl;
+
+    // if no result is found again, search only for the first key
+    secondKey.addr.set("0.0.0.0");
+    for( templIt = templFirst ; templIt != templEt ; templIt++ )
     {
         if( (*templIt)==secondKey )
             return templIt->tftId;
@@ -151,19 +174,6 @@ bool TrafficFlowFilter::addTrafficFlow( IPvXAddress firstKey , TrafficFlowTempla
 
 void TrafficFlowFilter::loadFilterTable(const char * filterTableFile)
 {
-    // open and check xml file
-    EV << "TrafficFlowFilter::loadFilterTable - reading file " << filterTableFile << endl;
-    cXMLElement* config = ev.getXMLDocument(filterTableFile);
-    if (config == NULL)
-        error("TrafficFlowFilter::loadFilterTable: Cannot read configuration from file: %s", filterTableFile);
-
-    // obtain reference to teidTable
-    cXMLElement* filterNode = config->getElementByPath("filterTable");
-    if (filterNode == NULL)
-        error("TrafficFlowFilter::loadFilterTable: No configuration for teidTable");
-
-    cXMLElementList tftList = filterNode->getChildren();
-
     // create default entries
     IPvXAddress destAddr("0.0.0.0"), srcAddr("0.0.0.0");
     unsigned int destPort = UNSPECIFIED_PORT;
@@ -176,17 +186,30 @@ void TrafficFlowFilter::loadFilterTable(const char * filterTableFile)
     const unsigned int numAttributes = 7;
     char const * attributes[numAttributes] = { "destAddr" , "tftId" , "destName" , "srcAddr" , "srcName" , "srcPort" , "destPort" };
     enum attributes                          { DEST_ADDR  , TFT_ID  , DEST_NAME  , SRC_ADDR  , SRC_NAME  , SRC_PORT  , DEST_PORT  };
+    char const * temp[numAttributes]; // this will keep the value of attributes as read from XML file
 
     // attribute iterator
     unsigned int attrId = 0;
 
-    char const * temp[numAttributes];
+
+    // open and check xml file
+    EV << "TrafficFlowFilter::loadFilterTable - reading file " << filterTableFile << endl;
+    cXMLElement* config = ev.getXMLDocument(filterTableFile);
+    if (config == NULL)
+        error("TrafficFlowFilter::loadFilterTable: Cannot read configuration from file: %s", filterTableFile);
+
+    // obtain reference to teidTable
+    cXMLElement* filterNode = config->getElementByPath("filterTable");
+    if (filterNode == NULL)
+        error("TrafficFlowFilter::loadFilterTable: No configuration for teidTable");
+
+    // obtain a list of nodes contained in the filterTable Tag
+    cXMLElementList tftList = filterNode->getChildren();
 
     // foreach tft element in the list, read the parameters and fill the tft table
     for (cXMLElementList::iterator tftIt = tftList.begin(); tftIt != tftList.end(); tftIt++)
     {
         std::string elementName = (*tftIt)->getTagName();
-
         if ((elementName == "filter"))
         {
             // clean attributes
@@ -203,7 +226,8 @@ void TrafficFlowFilter::loadFilterTable(const char * filterTableFile)
                 }
             }
 
-            // check and save tftID
+            // process each attribute
+            // check and save tftID. This field is mandatory
             if(temp[TFT_ID]==NULL)
             {
                 error("TrafficFlowFilter::loadFilterTable - attribute tftId MUST be specified for every traffic filter.");
@@ -211,7 +235,7 @@ void TrafficFlowFilter::loadFilterTable(const char * filterTableFile)
             else
                 tftId = atoi(temp[TFT_ID]);
 
-            // read src and dest port values
+            // read src and dest port values. These two fields are optional
             if(temp[DEST_PORT]!=NULL)
                 destPort = atoi(temp[DEST_PORT]);
             if(temp[SRC_PORT]!=NULL)
@@ -263,7 +287,7 @@ void TrafficFlowFilter::loadFilterTable(const char * filterTableFile)
                 primaryKey = destAddr;
                 secondaryKeyAddr = srcAddr;
             }
-
+            //=======================================================================================
 
             // create the new entry...finally
             TrafficFlowTemplate secondaryKey( secondaryKeyAddr , destPort , srcPort );

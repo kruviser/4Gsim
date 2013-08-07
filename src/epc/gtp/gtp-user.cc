@@ -30,7 +30,6 @@ void GtpUser::initialize(int stage)
     socket_.setOutputGate(gate("udpOut"));
     socket_.bind(localPort_);
 
-//    tunnelPeerAddress_ = IPvXAddressResolver().resolve(par("tunnelPeerAddress").stringValue());
     tunnelPeerPort_ = par("tunnelPeerPort");
 
     //============= Reading XML files =============
@@ -74,12 +73,12 @@ void GtpUser::handleFromTrafficFlowFilter(IPv4Datagram * datagram)
 {
     // extract control info from the datagram
     TftControlInfo * tftInfo = check_and_cast<TftControlInfo *>(datagram->removeControlInfo());
-    unsigned int flowId = tftInfo->getTft();
+    TrafficFlowTemplateId flowId = tftInfo->getTft();
     delete(tftInfo);
 
-    EV << "GtpUser::handleFromTrafficFlowFilter - Received a tftMessage with flowId[" << flowId << endl;
+    EV << "GtpUser::handleFromTrafficFlowFilter - Received a tftMessage with flowId[" << flowId << "]" << endl;
 
-    unsigned int nextTeid;
+    TunnelEndpointIdentifier nextTeid;
     IPvXAddress tunnelPeerAddress;
 
     // search a correspondence between the flow id and the pair <teid,nextHop>
@@ -95,6 +94,7 @@ void GtpUser::handleFromTrafficFlowFilter(IPv4Datagram * datagram)
 
     // create a new gtpUserMessage
     GtpUserMsg * gtpMsg = new GtpUserMsg();
+    gtpMsg->setName("gtpUserMessage");
 
     // assign the nextTeid
     gtpMsg->setTeid(nextTeid);
@@ -108,10 +108,8 @@ void GtpUser::handleFromTrafficFlowFilter(IPv4Datagram * datagram)
 
 void GtpUser::handleFromUdp(GtpUserMsg * gtpMsg)
 {
-    unsigned int oldTeid , nextTeid;
+    TunnelEndpointIdentifier oldTeid , nextTeid;
     IPvXAddress nextHopAddr;
-
-    // label switching or label removal should be performed here
 
     // obtain the incoming TEID from message
     oldTeid = gtpMsg->getTeid();
@@ -166,7 +164,7 @@ bool GtpUser::loadTeidTable(const char * teidTableFile)
 
     cXMLElementList teidList = teidNode->getChildren();
 
-    unsigned int teidIn,teidOut;
+    TunnelEndpointIdentifier teidIn,teidOut;
     IPvXAddress nextHop;
 
     // teid attributes management
@@ -202,7 +200,7 @@ bool GtpUser::loadTeidTable(const char * teidTableFile)
             nextHop.set(temp[2]);
 
             std::pair<LabelTable::iterator,bool> ret;
-            ret = teidTable_.insert(std::pair<unsigned int,ConnectionInfo>(teidIn,ConnectionInfo(teidOut,nextHop)));;
+            ret = teidTable_.insert(std::pair<TunnelEndpointIdentifier,ConnectionInfo>(teidIn,ConnectionInfo(teidOut,nextHop)));;
             if (ret.second==false)
               EV << "GtpUser::loadTeidTable - skipping duplicate entry  with TEID "<<  ret.first->first << '\n';
             else
@@ -231,7 +229,8 @@ bool GtpUser::loadTftTable(const char * tftTableFile)
     // obtain list of TFTs
     cXMLElementList tftList = tftNode->getChildren();
 
-    unsigned int tft,teidOut;
+    TrafficFlowTemplateId tft;
+    TunnelEndpointIdentifier teidOut;
     IPvXAddress nextHop;
 
     // TFT attributes management
@@ -271,7 +270,7 @@ bool GtpUser::loadTftTable(const char * tftTableFile)
 
             // create a new entry in the TEID table,
             std::pair<LabelTable::iterator,bool> ret;
-            ret = tftTable_.insert(std::pair<unsigned int,ConnectionInfo>(tft,ConnectionInfo(teidOut,nextHop)));;
+            ret = tftTable_.insert(std::pair<TrafficFlowTemplateId,ConnectionInfo>(tft,ConnectionInfo(teidOut,nextHop)));;
             if (ret.second==false)
               EV << "GtpUser::loadTftTable - skipping duplicate entry  with TFT "<<  ret.first->first << '\n';
             else

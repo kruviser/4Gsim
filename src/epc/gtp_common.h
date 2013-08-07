@@ -13,29 +13,31 @@ enum EpcNodeType
     SGW
 };
 
-#define LOCAL_ADDRESS_TEID 127
+#define LOCAL_ADDRESS_TEID -1
 
 #define UNSPECIFIED_PORT 65536
 
 #define UNSPECIFIED_TFT 65536
 
 //===================== GTP-U tunnel management =====================
+typedef int TunnelEndpointIdentifier;
+
 struct ConnectionInfo
 {
-    ConnectionInfo(unsigned int id, IPvXAddress hop): teid(id) , nextHop(hop){}
+    ConnectionInfo(TunnelEndpointIdentifier id, IPvXAddress hop): teid(id) , nextHop(hop){}
 
-    unsigned int teid;
+    TunnelEndpointIdentifier teid;
     IPvXAddress nextHop;
 };
 
-typedef std::map<unsigned int,ConnectionInfo> LabelTable;
+typedef std::map<TunnelEndpointIdentifier,ConnectionInfo> LabelTable;
 //===================================================================
 
 
 
 //=================== Traffic filters management ====================
 // identifies a traffic flow template
-typedef unsigned int TrafficFlowTemplateId;
+typedef int TrafficFlowTemplateId;
 
 struct TrafficFlowTemplate
 {

@@ -42,15 +42,15 @@ network lteCoreNetwork
             @display("p=746,244");
         }
         eNB3: pgwStandard {
-            nodeType = "ENB";
+            nodeType = "ENODEB";
             @display("p=223,463");
         }
         eNB1: pgwStandard {
-            nodeType = "ENB";
+            nodeType = "ENODEB";
             @display("p=223,113");
         }
         eNB2: pgwStandard {
-            nodeType = "ENB";
+            nodeType = "ENODEB";
             @display("p=223,317");
         }
         sgwStandard2: sgwStandard {

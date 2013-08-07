@@ -7,7 +7,7 @@
 		<!-- Local Address -->
 		<teid 
 			teidIn  ="0"
-			teidOut ="127"
+			teidOut ="-1"
 			nextHop ="0.0.0.0"
 		/>
 		<!-- ===================== -->	
@@ -54,7 +54,6 @@
 	<filterTable>
 		<filter
 			destName   = "UE1"
-			srcName    = "InternetHost"
 			tftId      = "1"     
 		/>
 		<filter

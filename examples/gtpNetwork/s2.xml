@@ -6,7 +6,7 @@
 	<teidTable>
 		<teid 
 			teidIn  ="0"
-			teidOut ="127"
+			teidOut ="-1"
 			nextHop ="0.0.0.0"
 		/>
 		<teid 
