@@ -20,7 +20,7 @@
 
 #include "GTPPath.h"
 
-class PDNConnection;
+//class PDNConnection;
 
 /*
  * Class for GTP tunnel end point. Each tunnel end point is identified uniquely in the
@@ -37,11 +37,11 @@ private:
 
 	GTPPath *path;
 
-	cPolymorphic *ownerp; // Subscriber, PDNConnection or BearerContext
+//	cPolymorphic *ownerp; // Subscriber, PDNConnection or BearerContext
 
 	GTP	*module;	// same as for path
 public:
-	// used only in S-GW for user and control GTP message forwarding
+//	// used only in S-GW for user and control GTP message forwarding
 	TunnelEndpoint *fwTunnEnd;
 
 	TunnelEndpoint();
@@ -59,8 +59,8 @@ public:
 	 */
 	void setLocalId(unsigned localId) { this->localId = localId; }
 	void setRemoteId(unsigned remoteId) { this->remoteId = remoteId; }
-	void setFwTunnelEndpoint(TunnelEndpoint *fwTunnEnd) { fwTunnEnd->fwTunnEnd = this; this->fwTunnEnd = fwTunnEnd; }
-	void setOwner(cPolymorphic *ownerp);
+//	void setFwTunnelEndpoint(TunnelEndpoint *fwTunnEnd) { fwTunnEnd->fwTunnEnd = this; this->fwTunnEnd = fwTunnEnd; }
+//	void setOwner(cPolymorphic *ownerp);
 	void setPath(GTPPath *path) { module = path->getModule(); this->path = path; }
 	void setModule(GTP *module) { this->module = module; }
 
@@ -69,9 +69,9 @@ public:
 	 */
 	unsigned getLocalId() { return localId; }
 	unsigned getRemoteId() { return remoteId; }
-	TunnelEndpoint *getFwTunnelEndpoint() { return fwTunnEnd; }
+//	TunnelEndpoint *getFwTunnelEndpoint() { return fwTunnEnd; }
 	GTPPath *getPath() { return path; }
-	cPolymorphic *getOwner();
+//	cPolymorphic *getOwner();
 	GTP *getModule() { return module; }
 	IPvXAddress getLocalAddr() { return path->getLocalAddr(); }
 	IPvXAddress getRemoteAddr() { return path->getRemoteAddr(); }

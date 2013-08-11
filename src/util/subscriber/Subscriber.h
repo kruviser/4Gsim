@@ -128,7 +128,7 @@ public:
 	void setPlmnId(char *plmnId) { this->plmnId = plmnId; }
 	void setTac(char *tac) { this->tac = tac; }
 	void setMsisdn(char *msisdn) { this->msisdn = msisdn; }
-	void setS11TunnEnd(TunnelEndpoint *s11Tunn) { s11Tunn->setOwner(this); this->s11Tunn = s11Tunn; }
+	void setS11TunnEnd(TunnelEndpoint *s11Tunn) { /*s11Tunn->setOwner(this);*/ this->s11Tunn = s11Tunn; }
 	void setEmmEntity(EMMEntity *emm) { this->emm = emm; }
 	void setEsmEntity(ESMEntity *esm) { this->esm = esm; }
 	void setStatus(char status) { this->status = status; }

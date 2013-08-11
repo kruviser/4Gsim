@@ -20,15 +20,11 @@ src
 -inet.examples.traci
 -inet.examples.diffserv
 -inet.examples.ipv6
--inet.nodes.bgp
--inet.examples.ospfv2
 -inet.networklayer.xmipv6
 -inet.examples.traci_launchd
 -inet.examples.rtp
--inet.networklayer.ospfv2
--inet.examples.httptools.socket
 -inet.examples.manetrouting
--inet.networklayer.bgpv4
+-inet.examples.httptools.socket
 -inet.applications.traci
 -inet.networklayer.ipv6tunneling
 -inet.examples.voiptool
@@ -38,8 +34,6 @@ src
 -inet.networklayer.ldp
 -inet.networklayer.mpls
 -inet.nodes.ipv6
--inet.examples.bgpv4
 -inet.networklayer.manetrouting
 -inet.applications.rtpapp
 -inet.networklayer.icmpv6
--inet.nodes.ospfv2

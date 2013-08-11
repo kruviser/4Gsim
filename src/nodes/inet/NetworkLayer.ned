@@ -46,6 +46,7 @@ module NetworkLayer
         input pingIn[];
         input manetIn;
         input igmpIn;
+        input gtpIn;
         output ifOut[] @labels(IPv4Datagram);
         output tcpOut @labels(TCPSegment,IPv4ControlInfo/up);
         output udpOut @labels(UDPPacket,IPv4ControlInfo/up);
@@ -55,6 +56,7 @@ module NetworkLayer
         output pingOut[];
         output manetOut;
         output igmpOut;
+        output gtpOut;
 
     submodules:
         ip: IPv4 {
@@ -62,8 +64,8 @@ module NetworkLayer
                 protocolMapping = "6:0,17:1,1:2,2:3,46:4,89:5,132:6,48:7,138:7"; // see: http://www.iana.org/assignments/protocol-numbers
                 @display("p=85,95;q=queue");
             gates:
-                transportIn[8];
-                transportOut[8];
+                transportIn[9];
+                transportOut[9];
                 queueIn[sizeof(ifIn)];
         }
         arp: ARP {
@@ -111,6 +113,9 @@ module NetworkLayer
 
         ip.transportOut[7] --> { @display("m=n"); } --> manetOut;
         ip.transportIn[7] <-- { @display("m=n"); } <-- manetIn;
+        
+        ip.transportOut[8] --> { @display("m=n"); } --> gtpOut;
+        ip.transportIn[8] <-- { @display("m=n"); } <-- gtpIn;
 
         for i=0..sizeof(pingOut)-1 {
             icmp.pingOut++ --> { @display("m=n"); } --> pingOut[i];

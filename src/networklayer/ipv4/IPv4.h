@@ -29,6 +29,9 @@
 #include "ControlManetRouting_m.h"
 #endif
 
+#ifdef WITH_GTP
+	const int gtpGateIndex = 8;
+#endif
 
 class ARPPacket;
 class ICMPMessage;
@@ -51,6 +54,7 @@ class INET_API IPv4 : public QueueBase
     ICMPAccess icmpAccess;
     cGate *queueOutGate; // the most frequently used output gate
     bool manetRouting;
+    bool gtpUser;
 
     // config
     int defaultTimeToLive;
@@ -181,6 +185,13 @@ class INET_API IPv4 : public QueueBase
      * Sends a packet to the Manet module.
      */
     virtual void sendToManet(cPacket *packet);
+#endif
+
+#ifdef WITH_GTP
+    /**
+     * Sends a packet to the GTP user module.
+     */
+    virtual void sendToGTP(cPacket *packet);
 #endif
 
   public:

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<SGWConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="SGW.xsd">
+	<GTP mcc="558" mnc="71">
+		<Paths>
+			<Path localAddr="192.168.1.1" remoteAddr="192.168.0.1" ctrlAddr="192.168.4.2" type="4"/> <!-- 4 = S5/S8 SGW GTP-U interface -->
+			<Path localAddr="192.168.2.1" remoteAddr="192.168.3.1" ctrlAddr="192.168.5.2" type="1"/> <!-- 1 = S1-U SGW GTP-U interface -->		
+		</Paths>
+		<Tunnels>
+			<TunnelTransit localId="2" remoteId="3" path="1"/>
+			<TunnelTransit localId="3" remoteId="1" path="0"/>
+		</Tunnels>
+	</GTP>  
+</SGWConfig>

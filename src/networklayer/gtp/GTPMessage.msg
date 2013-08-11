@@ -62,6 +62,7 @@ enum GTPMessageType
 	CreateSessionResponse 	= 33;
 	ModifyBearerRequest		= 34;
 	ModifyBearerResponse	= 35;
+	GPDU					= 255;
 }
 
 enum GTPv2IEType

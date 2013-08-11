@@ -97,7 +97,7 @@ public:
 	 */
 	void setId(unsigned char id) { this->id = id; }
 	void setENBTunnEnd(TunnelEndpoint *enbTunn) { this->enbTunn = enbTunn; }
-	void setSGWTunnEnd(TunnelEndpoint *sgwTunn) { sgwTunn->setOwner(this); this->sgwTunn = sgwTunn; }
+	void setSGWTunnEnd(TunnelEndpoint *sgwTunn) { /*sgwTunn->setOwner(this);*/ this->sgwTunn = sgwTunn; }
 	void setPGWTunnEnd(TunnelEndpoint *pgwTunn) { this->pgwTunn = pgwTunn; }
 	void setOwner(PDNConnection *esm);
 	void setProcId(unsigned char procId) { this->procId = procId; }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PGWConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="PGW.xsd">
+	<GTP mcc="558" mnc="71">
+		<Paths>
+			<Path localAddr="192.168.0.1" remoteAddr="192.168.1.1" ctrlAddr="192.168.4.1" type="5"/> <!-- 5 = S5/S8 PGW GTP-U interface -->
+		</Paths>
+		<Tunnels>
+			<TunnelEntry subAddr="10.1.1.14" remoteId="2" path="0"/>
+		</Tunnels>
+	</GTP>
+</PGWConfig>

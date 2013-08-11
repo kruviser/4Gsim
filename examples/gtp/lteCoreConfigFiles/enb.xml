@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ENBConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="ENB.xsd">
+	<NAS appType="2">		<!-- appType - 2 = RELAY -->
+	</NAS>
+    <S1AP 	type="1"			
+    		mcc="591"
+    		mnc="78"
+    		cellId="1"
+    		name="enb1">	<!-- 1 = connector -->
+	</S1AP>
+	<GTP mcc="558" mnc="71">
+		<Paths>
+			<Path localAddr="192.168.3.1" remoteAddr="192.168.2.1" ctrlAddr="192.168.2.2" type="0"/> <!-- 0 = S1-U eNodeB GTP-U interface -->
+		</Paths>
+		<Tunnels>
+			<TunnelEntry subAddr="10.1.1.14" remoteId="3" path="0"/>
+		</Tunnels>
+	</GTP>  
+</ENBConfig>

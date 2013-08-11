@@ -1,0 +1,2337 @@
+version 2
+run Internet-LTE-0-20130811-19:37:10-5996
+attr configname Internet-LTE
+attr datetime 20130811-19:37:10
+attr experiment Internet-LTE
+attr inifile lteCoreExample.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network lteCoreNetwork
+attr processid 5996
+attr repetition 0
+attr replication #0
+attr resultdir ResultLteCoreNetwork
+attr runnumber 0
+attr seedset 0
+
+scalar lteCoreNetwork.pgwStandard.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar lteCoreNetwork.pgwStandard.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar lteCoreNetwork.pgwStandard.udp 	passedUpPk:count 	2
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar lteCoreNetwork.pgwStandard.udp 	rcvdPk:count 	2
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar lteCoreNetwork.pgwStandard.udp 	rcvdPk:sum(packetBytes) 	168
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.udp 	sentPk:count 	2
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar lteCoreNetwork.pgwStandard.udp 	sentPk:sum(packetBytes) 	168
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.pingApp 	pingRxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping rx seq, count"
+scalar lteCoreNetwork.pgwStandard.pingApp 	pingTxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping tx seq, count"
+scalar lteCoreNetwork.pgwStandard.pingApp 	numOutOfOrderArrivals:last 	-1.#IND
+attr interpolationmode  none
+attr title  "ping out-of-order arrivals, last"
+scalar lteCoreNetwork.pgwStandard.pingApp 	numLost:last 	-1.#IND
+attr interpolationmode  none
+attr title  "pings lost, last"
+statistic lteCoreNetwork.pgwStandard.pingApp 	rtt:histogram
+field count 0
+field mean 0
+field stddev -1.#IND
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "ping round-trip time, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.pgwStandard.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar lteCoreNetwork.pgwStandard.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar lteCoreNetwork.pgwStandard.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar lteCoreNetwork.pgwStandard.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar lteCoreNetwork.pgwStandard.ppp[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar lteCoreNetwork.pgwStandard.ppp[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic lteCoreNetwork.pgwStandard.ppp[0].queue 	queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.pgwStandard.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar lteCoreNetwork.pgwStandard.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.ppp[0].queue 	rcvdPk:count 	2
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar lteCoreNetwork.pgwStandard.ppp[0].queue 	rcvdPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.ppp[0].ppp 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.pgwStandard.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.ppp[0].ppp 	rcvdPkFromHL:count 	2
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar lteCoreNetwork.pgwStandard.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.pgwStandard.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.pgwStandard.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.ppp[0].ppp 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.pgwStandard.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.ppp[0].ppp 	txPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.pgwStandard.ppp[0].ppp 	txPk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.ppp[0].ppp 	txState:timeavg 	8.8799573762046e-005
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	"simulated time" 	2.0000096
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	full-duplex 	1
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	"frames/sec sent" 	0.99999520002304
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	"frames/sec rcvd" 	0.99999520002304
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	"bits/sec sent" 	631.99696641456
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	"bits/sec rcvd" 	631.99696641456
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	"rx channel idle (%)" 	99.993040033408
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	"rx channel utilization (%)" 	0.0069599665921604
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	rxPkFromHL:count 	2
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	txPk:count 	2
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	txPk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	passedUpPk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.pgwStandard.eth[0].mac 	rxPkOk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar lteCoreNetwork.pgwStandard.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar lteCoreNetwork.pgwStandard.eth[0].encap 	decapPk:count 	2
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar lteCoreNetwork.pgwStandard.eth[0].encap 	decapPk:sum(packetBytes) 	104
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[0].encap 	encapPk:count 	2
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar lteCoreNetwork.pgwStandard.eth[0].encap 	encapPk:sum(packetBytes) 	104
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	"simulated time" 	2.0000096
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	full-duplex 	1
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	"frames/sec sent" 	0.99999520002304
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	"frames/sec rcvd" 	0.99999520002304
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	"bits/sec sent" 	631.99696641456
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	"bits/sec rcvd" 	631.99696641456
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	"rx channel idle (%)" 	99.993040033408
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	"rx channel utilization (%)" 	0.0069599665921604
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	rxPkFromHL:count 	2
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	txPk:count 	2
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	txPk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	passedUpPk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.pgwStandard.eth[1].mac 	rxPkOk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar lteCoreNetwork.pgwStandard.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar lteCoreNetwork.pgwStandard.eth[1].encap 	decapPk:count 	2
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar lteCoreNetwork.pgwStandard.eth[1].encap 	decapPk:sum(packetBytes) 	104
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.pgwStandard.eth[1].encap 	encapPk:count 	2
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar lteCoreNetwork.pgwStandard.eth[1].encap 	encapPk:sum(packetBytes) 	104
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar lteCoreNetwork.sgwStandard2.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar lteCoreNetwork.sgwStandard2.udp 	passedUpPk:count 	4
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar lteCoreNetwork.sgwStandard2.udp 	rcvdPk:count 	4
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar lteCoreNetwork.sgwStandard2.udp 	rcvdPk:sum(packetBytes) 	336
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.udp 	sentPk:count 	4
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar lteCoreNetwork.sgwStandard2.udp 	sentPk:sum(packetBytes) 	336
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.pingApp 	pingRxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping rx seq, count"
+scalar lteCoreNetwork.sgwStandard2.pingApp 	pingTxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping tx seq, count"
+scalar lteCoreNetwork.sgwStandard2.pingApp 	numOutOfOrderArrivals:last 	-1.#IND
+attr interpolationmode  none
+attr title  "ping out-of-order arrivals, last"
+scalar lteCoreNetwork.sgwStandard2.pingApp 	numLost:last 	-1.#IND
+attr interpolationmode  none
+attr title  "pings lost, last"
+statistic lteCoreNetwork.sgwStandard2.pingApp 	rtt:histogram
+field count 0
+field mean 0
+field stddev -1.#IND
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "ping round-trip time, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.sgwStandard2.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar lteCoreNetwork.sgwStandard2.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar lteCoreNetwork.sgwStandard2.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar lteCoreNetwork.sgwStandard2.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic lteCoreNetwork.sgwStandard2.ppp[0].queue 	queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.sgwStandard2.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].queue 	rcvdPk:count 	2
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].queue 	rcvdPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].ppp 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].ppp 	rcvdPkFromHL:count 	2
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].ppp 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].ppp 	txPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].ppp 	txPk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[0].ppp 	txState:timeavg 	8.8799573762046e-005
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic lteCoreNetwork.sgwStandard2.ppp[1].queue 	queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.sgwStandard2.ppp[1].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].queue 	rcvdPk:count 	2
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].queue 	rcvdPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].ppp 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].ppp 	passedUpPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].ppp 	rcvdPkFromHL:count 	2
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].ppp 	rcvdPkFromHL:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].ppp 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].ppp 	rxPkOk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].ppp 	txPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].ppp 	txPk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.sgwStandard2.ppp[1].ppp 	txState:timeavg 	8.8799573762046e-005
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar lteCoreNetwork.router.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar lteCoreNetwork.router.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar lteCoreNetwork.router.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar lteCoreNetwork.router.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar lteCoreNetwork.router.ppp[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar lteCoreNetwork.router.ppp[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic lteCoreNetwork.router.ppp[0].queue 	queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.router.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar lteCoreNetwork.router.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[0].queue 	rcvdPk:count 	2
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar lteCoreNetwork.router.ppp[0].queue 	rcvdPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[0].ppp 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.router.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[0].ppp 	rcvdPkFromHL:count 	2
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar lteCoreNetwork.router.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.router.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.router.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[0].ppp 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.router.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[0].ppp 	txPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.router.ppp[0].ppp 	txPk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[0].ppp 	txState:timeavg 	8.8799573762046e-005
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar lteCoreNetwork.router.ppp[1].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar lteCoreNetwork.router.ppp[1].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic lteCoreNetwork.router.ppp[1].queue 	queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.router.ppp[1].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar lteCoreNetwork.router.ppp[1].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[1].queue 	rcvdPk:count 	2
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar lteCoreNetwork.router.ppp[1].queue 	rcvdPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[1].ppp 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.router.ppp[1].ppp 	passedUpPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[1].ppp 	rcvdPkFromHL:count 	2
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar lteCoreNetwork.router.ppp[1].ppp 	rcvdPkFromHL:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[1].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.router.ppp[1].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[1].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.router.ppp[1].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[1].ppp 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.router.ppp[1].ppp 	rxPkOk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[1].ppp 	txPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.router.ppp[1].ppp 	txPk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.router.ppp[1].ppp 	txState:timeavg 	8.8799573762046e-005
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar lteCoreNetwork.InternetHost.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar lteCoreNetwork.InternetHost.networkLayer.arp 	initiatedResolution:count 	1
+attr title  "ARP initiated resolutions, count"
+scalar lteCoreNetwork.InternetHost.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar lteCoreNetwork.InternetHost.networkLayer.arp 	sentReq:count 	1
+attr title  "ARP request sent, count"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	"simulated time" 	2.0000096
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	full-duplex 	1
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	"frames/sec sent" 	0.99999520002304
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	"frames/sec rcvd" 	0.99999520002304
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	"bits/sec sent" 	631.99696641456
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	"bits/sec rcvd" 	631.99696641456
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	"rx channel idle (%)" 	99.993040033408
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	"rx channel utilization (%)" 	0.0069599665921604
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	rxPkFromHL:count 	3
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	252
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	txPk:count 	2
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	txPk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	passedUpPk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.InternetHost.eth[0].mac 	rxPkOk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar lteCoreNetwork.InternetHost.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar lteCoreNetwork.InternetHost.eth[0].encap 	decapPk:count 	2
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar lteCoreNetwork.InternetHost.eth[0].encap 	decapPk:sum(packetBytes) 	104
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost.eth[0].encap 	encapPk:count 	3
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar lteCoreNetwork.InternetHost.eth[0].encap 	encapPk:sum(packetBytes) 	180
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost.pingApp[0] 	"Pings sent" 	2
+scalar lteCoreNetwork.InternetHost.pingApp[0] 	"ping loss rate (%)" 	50
+scalar lteCoreNetwork.InternetHost.pingApp[0] 	"ping out-of-order rate (%)" 	0
+scalar lteCoreNetwork.InternetHost.pingApp[0] 	pingRxSeq:count 	1
+attr interpolationmode  none
+attr title  "ping rx seq, count"
+scalar lteCoreNetwork.InternetHost.pingApp[0] 	pingTxSeq:count 	2
+attr interpolationmode  none
+attr title  "ping tx seq, count"
+scalar lteCoreNetwork.InternetHost.pingApp[0] 	numOutOfOrderArrivals:last 	-1.#IND
+attr interpolationmode  none
+attr title  "ping out-of-order arrivals, last"
+scalar lteCoreNetwork.InternetHost.pingApp[0] 	numLost:last 	-1.#IND
+attr interpolationmode  none
+attr title  "pings lost, last"
+statistic lteCoreNetwork.InternetHost.pingApp[0] 	rtt:histogram
+field count 1
+field mean 0.0015282
+field stddev -1.#IND
+field sum 0.0015282
+field sqrsum 2.33539524e-006
+field min 0.0015282
+field max 0.0015282
+attr interpolationmode  none
+attr title  "ping round-trip time, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.4984718	0
+bin	-0.46513846666667	0
+bin	-0.43180513333333	0
+bin	-0.3984718	0
+bin	-0.36513846666667	0
+bin	-0.33180513333333	0
+bin	-0.2984718	0
+bin	-0.26513846666667	0
+bin	-0.23180513333333	0
+bin	-0.1984718	0
+bin	-0.16513846666667	0
+bin	-0.13180513333333	0
+bin	-0.0984718	0
+bin	-0.065138466666667	0
+bin	-0.031805133333333	0
+bin	0.0015282	1
+bin	0.034861533333333	0
+bin	0.068194866666667	0
+bin	0.1015282	0
+bin	0.13486153333333	0
+bin	0.16819486666667	0
+bin	0.2015282	0
+bin	0.23486153333333	0
+bin	0.26819486666667	0
+bin	0.3015282	0
+bin	0.33486153333333	0
+bin	0.36819486666667	0
+bin	0.4015282	0
+bin	0.43486153333333	0
+bin	0.46819486666667	0
+bin	0.5015282	0
+scalar lteCoreNetwork.InternetHost.pingApp[1] 	pingRxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping rx seq, count"
+scalar lteCoreNetwork.InternetHost.pingApp[1] 	pingTxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping tx seq, count"
+scalar lteCoreNetwork.InternetHost.pingApp[1] 	numOutOfOrderArrivals:last 	-1.#IND
+attr interpolationmode  none
+attr title  "ping out-of-order arrivals, last"
+scalar lteCoreNetwork.InternetHost.pingApp[1] 	numLost:last 	-1.#IND
+attr interpolationmode  none
+attr title  "pings lost, last"
+statistic lteCoreNetwork.InternetHost.pingApp[1] 	rtt:histogram
+field count 0
+field mean 0
+field stddev -1.#IND
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "ping round-trip time, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.InternetHost.pingApp[2] 	pingRxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping rx seq, count"
+scalar lteCoreNetwork.InternetHost.pingApp[2] 	pingTxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping tx seq, count"
+scalar lteCoreNetwork.InternetHost.pingApp[2] 	numOutOfOrderArrivals:last 	-1.#IND
+attr interpolationmode  none
+attr title  "ping out-of-order arrivals, last"
+scalar lteCoreNetwork.InternetHost.pingApp[2] 	numLost:last 	-1.#IND
+attr interpolationmode  none
+attr title  "pings lost, last"
+statistic lteCoreNetwork.InternetHost.pingApp[2] 	rtt:histogram
+field count 0
+field mean 0
+field stddev -1.#IND
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "ping round-trip time, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.router1.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar lteCoreNetwork.router1.networkLayer.arp 	initiatedResolution:count 	1
+attr title  "ARP initiated resolutions, count"
+scalar lteCoreNetwork.router1.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar lteCoreNetwork.router1.networkLayer.arp 	sentReq:count 	1
+attr title  "ARP request sent, count"
+scalar lteCoreNetwork.router1.eth[0].mac 	"simulated time" 	2.0000096
+scalar lteCoreNetwork.router1.eth[0].mac 	full-duplex 	1
+scalar lteCoreNetwork.router1.eth[0].mac 	"frames/sec sent" 	0.99999520002304
+scalar lteCoreNetwork.router1.eth[0].mac 	"frames/sec rcvd" 	0.99999520002304
+scalar lteCoreNetwork.router1.eth[0].mac 	"bits/sec sent" 	631.99696641456
+scalar lteCoreNetwork.router1.eth[0].mac 	"bits/sec rcvd" 	631.99696641456
+scalar lteCoreNetwork.router1.eth[0].mac 	"rx channel idle (%)" 	99.993040033408
+scalar lteCoreNetwork.router1.eth[0].mac 	"rx channel utilization (%)" 	0.0069599665921604
+scalar lteCoreNetwork.router1.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar lteCoreNetwork.router1.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[0].mac 	rxPkFromHL:count 	2
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar lteCoreNetwork.router1.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar lteCoreNetwork.router1.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar lteCoreNetwork.router1.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar lteCoreNetwork.router1.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar lteCoreNetwork.router1.eth[0].mac 	txPk:count 	2
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.router1.eth[0].mac 	txPk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[0].mac 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.router1.eth[0].mac 	passedUpPk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.router1.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.router1.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[0].mac 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.router1.eth[0].mac 	rxPkOk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar lteCoreNetwork.router1.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar lteCoreNetwork.router1.eth[0].encap 	decapPk:count 	2
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar lteCoreNetwork.router1.eth[0].encap 	decapPk:sum(packetBytes) 	104
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[0].encap 	encapPk:count 	2
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar lteCoreNetwork.router1.eth[0].encap 	encapPk:sum(packetBytes) 	104
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[1].mac 	"simulated time" 	2.0000096
+scalar lteCoreNetwork.router1.eth[1].mac 	full-duplex 	1
+scalar lteCoreNetwork.router1.eth[1].mac 	"frames/sec sent" 	0.99999520002304
+scalar lteCoreNetwork.router1.eth[1].mac 	"frames/sec rcvd" 	0.99999520002304
+scalar lteCoreNetwork.router1.eth[1].mac 	"bits/sec sent" 	631.99696641456
+scalar lteCoreNetwork.router1.eth[1].mac 	"bits/sec rcvd" 	631.99696641456
+scalar lteCoreNetwork.router1.eth[1].mac 	"rx channel idle (%)" 	99.993040033408
+scalar lteCoreNetwork.router1.eth[1].mac 	"rx channel utilization (%)" 	0.0069599665921604
+scalar lteCoreNetwork.router1.eth[1].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar lteCoreNetwork.router1.eth[1].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[1].mac 	rxPkFromHL:count 	2
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar lteCoreNetwork.router1.eth[1].mac 	rxPkFromHL:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[1].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar lteCoreNetwork.router1.eth[1].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar lteCoreNetwork.router1.eth[1].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar lteCoreNetwork.router1.eth[1].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar lteCoreNetwork.router1.eth[1].mac 	txPk:count 	2
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.router1.eth[1].mac 	txPk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[1].mac 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.router1.eth[1].mac 	passedUpPk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[1].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.router1.eth[1].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[1].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.router1.eth[1].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[1].mac 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.router1.eth[1].mac 	rxPkOk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[1].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar lteCoreNetwork.router1.eth[1].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar lteCoreNetwork.router1.eth[1].encap 	decapPk:count 	2
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar lteCoreNetwork.router1.eth[1].encap 	decapPk:sum(packetBytes) 	104
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.router1.eth[1].encap 	encapPk:count 	2
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar lteCoreNetwork.router1.eth[1].encap 	encapPk:sum(packetBytes) 	104
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost1.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar lteCoreNetwork.InternetHost1.networkLayer.arp 	initiatedResolution:count 	1
+attr title  "ARP initiated resolutions, count"
+scalar lteCoreNetwork.InternetHost1.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar lteCoreNetwork.InternetHost1.networkLayer.arp 	sentReq:count 	1
+attr title  "ARP request sent, count"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	"simulated time" 	2.0000096
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	full-duplex 	1
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	"frames/sec sent" 	0.99999520002304
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	"frames/sec rcvd" 	0.99999520002304
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	"bits/sec sent" 	631.99696641456
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	"bits/sec rcvd" 	631.99696641456
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	"rx channel idle (%)" 	99.993040033408
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	"rx channel utilization (%)" 	0.0069599665921604
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	rxPkFromHL:count 	3
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	252
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	txPk:count 	2
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	txPk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	passedUpPk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.InternetHost1.eth[0].mac 	rxPkOk:sum(packetBytes) 	158
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost1.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar lteCoreNetwork.InternetHost1.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar lteCoreNetwork.InternetHost1.eth[0].encap 	decapPk:count 	2
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar lteCoreNetwork.InternetHost1.eth[0].encap 	decapPk:sum(packetBytes) 	104
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost1.eth[0].encap 	encapPk:count 	3
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar lteCoreNetwork.InternetHost1.eth[0].encap 	encapPk:sum(packetBytes) 	180
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.InternetHost1.pingApp[0] 	"Pings sent" 	2
+scalar lteCoreNetwork.InternetHost1.pingApp[0] 	"ping loss rate (%)" 	50
+scalar lteCoreNetwork.InternetHost1.pingApp[0] 	"ping out-of-order rate (%)" 	0
+scalar lteCoreNetwork.InternetHost1.pingApp[0] 	pingRxSeq:count 	1
+attr interpolationmode  none
+attr title  "ping rx seq, count"
+scalar lteCoreNetwork.InternetHost1.pingApp[0] 	pingTxSeq:count 	2
+attr interpolationmode  none
+attr title  "ping tx seq, count"
+scalar lteCoreNetwork.InternetHost1.pingApp[0] 	numOutOfOrderArrivals:last 	-1.#IND
+attr interpolationmode  none
+attr title  "ping out-of-order arrivals, last"
+scalar lteCoreNetwork.InternetHost1.pingApp[0] 	numLost:last 	-1.#IND
+attr interpolationmode  none
+attr title  "pings lost, last"
+statistic lteCoreNetwork.InternetHost1.pingApp[0] 	rtt:histogram
+field count 1
+field mean 0.0013456
+field stddev -1.#IND
+field sum 0.0013456
+field sqrsum 1.81063936e-006
+field min 0.0013456
+field max 0.0013456
+attr interpolationmode  none
+attr title  "ping round-trip time, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.4986544	0
+bin	-0.46532106666667	0
+bin	-0.43198773333333	0
+bin	-0.3986544	0
+bin	-0.36532106666667	0
+bin	-0.33198773333333	0
+bin	-0.2986544	0
+bin	-0.26532106666667	0
+bin	-0.23198773333333	0
+bin	-0.1986544	0
+bin	-0.16532106666667	0
+bin	-0.13198773333333	0
+bin	-0.0986544	0
+bin	-0.065321066666667	0
+bin	-0.031987733333333	0
+bin	0.0013456	1
+bin	0.034678933333333	0
+bin	0.068012266666667	0
+bin	0.1013456	0
+bin	0.13467893333333	0
+bin	0.16801226666667	0
+bin	0.2013456	0
+bin	0.23467893333333	0
+bin	0.26801226666667	0
+bin	0.3013456	0
+bin	0.33467893333333	0
+bin	0.36801226666667	0
+bin	0.4013456	0
+bin	0.43467893333333	0
+bin	0.46801226666667	0
+bin	0.5013456	0
+scalar lteCoreNetwork.InternetHost1.pingApp[1] 	pingRxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping rx seq, count"
+scalar lteCoreNetwork.InternetHost1.pingApp[1] 	pingTxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping tx seq, count"
+scalar lteCoreNetwork.InternetHost1.pingApp[1] 	numOutOfOrderArrivals:last 	-1.#IND
+attr interpolationmode  none
+attr title  "ping out-of-order arrivals, last"
+scalar lteCoreNetwork.InternetHost1.pingApp[1] 	numLost:last 	-1.#IND
+attr interpolationmode  none
+attr title  "pings lost, last"
+statistic lteCoreNetwork.InternetHost1.pingApp[1] 	rtt:histogram
+field count 0
+field mean 0
+field stddev -1.#IND
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "ping round-trip time, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.InternetHost1.pingApp[2] 	pingRxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping rx seq, count"
+scalar lteCoreNetwork.InternetHost1.pingApp[2] 	pingTxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping tx seq, count"
+scalar lteCoreNetwork.InternetHost1.pingApp[2] 	numOutOfOrderArrivals:last 	-1.#IND
+attr interpolationmode  none
+attr title  "ping out-of-order arrivals, last"
+scalar lteCoreNetwork.InternetHost1.pingApp[2] 	numLost:last 	-1.#IND
+attr interpolationmode  none
+attr title  "pings lost, last"
+statistic lteCoreNetwork.InternetHost1.pingApp[2] 	rtt:histogram
+field count 0
+field mean 0
+field stddev -1.#IND
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "ping round-trip time, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.eNB.eth[0].mac 	"simulated time" 	2.0000096
+scalar lteCoreNetwork.eNB.eth[0].mac 	full-duplex 	1
+scalar lteCoreNetwork.eNB.eth[0].mac 	"frames/sec sent" 	1.4999928000346
+scalar lteCoreNetwork.eNB.eth[0].mac 	"frames/sec rcvd" 	1.4999928000346
+scalar lteCoreNetwork.eNB.eth[0].mac 	"bits/sec sent" 	1007.9951616232
+scalar lteCoreNetwork.eNB.eth[0].mac 	"bits/sec rcvd" 	1007.9951616232
+scalar lteCoreNetwork.eNB.eth[0].mac 	"rx channel idle (%)" 	99.988960052992
+scalar lteCoreNetwork.eNB.eth[0].mac 	"rx channel utilization (%)" 	0.011039947008254
+scalar lteCoreNetwork.eNB.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar lteCoreNetwork.eNB.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.eth[0].mac 	rxPkFromHL:count 	3
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar lteCoreNetwork.eNB.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	252
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar lteCoreNetwork.eNB.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar lteCoreNetwork.eNB.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar lteCoreNetwork.eNB.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar lteCoreNetwork.eNB.eth[0].mac 	txPk:count 	3
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.eNB.eth[0].mac 	txPk:sum(packetBytes) 	252
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.eth[0].mac 	passedUpPk:count 	3
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.eNB.eth[0].mac 	passedUpPk:sum(packetBytes) 	252
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.eNB.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.eNB.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.eth[0].mac 	rxPkOk:count 	3
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.eNB.eth[0].mac 	rxPkOk:sum(packetBytes) 	252
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar lteCoreNetwork.eNB.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar lteCoreNetwork.eNB.eth[0].encap 	decapPk:count 	3
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar lteCoreNetwork.eNB.eth[0].encap 	decapPk:sum(packetBytes) 	180
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.eth[0].encap 	encapPk:count 	3
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar lteCoreNetwork.eNB.eth[0].encap 	encapPk:sum(packetBytes) 	180
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.ppp[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar lteCoreNetwork.eNB.ppp[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic lteCoreNetwork.eNB.ppp[0].queue 	queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.eNB.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar lteCoreNetwork.eNB.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.ppp[0].queue 	rcvdPk:count 	2
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar lteCoreNetwork.eNB.ppp[0].queue 	rcvdPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.ppp[0].ppp 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.eNB.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.ppp[0].ppp 	rcvdPkFromHL:count 	2
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar lteCoreNetwork.eNB.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.eNB.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.eNB.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.ppp[0].ppp 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.eNB.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.ppp[0].ppp 	txPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.eNB.ppp[0].ppp 	txPk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.ppp[0].ppp 	txState:timeavg 	8.8799573762046e-005
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar lteCoreNetwork.eNB.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar lteCoreNetwork.eNB.networkLayer.arp 	initiatedResolution:count 	1
+attr title  "ARP initiated resolutions, count"
+scalar lteCoreNetwork.eNB.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar lteCoreNetwork.eNB.networkLayer.arp 	sentReq:count 	1
+attr title  "ARP request sent, count"
+scalar lteCoreNetwork.eNB.pingApp 	pingRxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping rx seq, count"
+scalar lteCoreNetwork.eNB.pingApp 	pingTxSeq:count 	0
+attr interpolationmode  none
+attr title  "ping tx seq, count"
+scalar lteCoreNetwork.eNB.pingApp 	numOutOfOrderArrivals:last 	-1.#IND
+attr interpolationmode  none
+attr title  "ping out-of-order arrivals, last"
+scalar lteCoreNetwork.eNB.pingApp 	numLost:last 	-1.#IND
+attr interpolationmode  none
+attr title  "pings lost, last"
+statistic lteCoreNetwork.eNB.pingApp 	rtt:histogram
+field count 0
+field mean 0
+field stddev -1.#IND
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "ping round-trip time, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.eNB.udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar lteCoreNetwork.eNB.udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar lteCoreNetwork.eNB.udp 	passedUpPk:count 	2
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar lteCoreNetwork.eNB.udp 	rcvdPk:count 	2
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar lteCoreNetwork.eNB.udp 	rcvdPk:sum(packetBytes) 	168
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar lteCoreNetwork.eNB.udp 	sentPk:count 	2
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar lteCoreNetwork.eNB.udp 	sentPk:sum(packetBytes) 	168
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar lteCoreNetwork.router2.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar lteCoreNetwork.router2.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar lteCoreNetwork.router2.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar lteCoreNetwork.router2.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar lteCoreNetwork.router2.ppp[0].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar lteCoreNetwork.router2.ppp[0].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic lteCoreNetwork.router2.ppp[0].queue 	queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.router2.ppp[0].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar lteCoreNetwork.router2.ppp[0].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[0].queue 	rcvdPk:count 	2
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar lteCoreNetwork.router2.ppp[0].queue 	rcvdPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[0].ppp 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.router2.ppp[0].ppp 	passedUpPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[0].ppp 	rcvdPkFromHL:count 	2
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar lteCoreNetwork.router2.ppp[0].ppp 	rcvdPkFromHL:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[0].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.router2.ppp[0].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[0].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.router2.ppp[0].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[0].ppp 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.router2.ppp[0].ppp 	rxPkOk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[0].ppp 	txPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.router2.ppp[0].ppp 	txPk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[0].ppp 	txState:timeavg 	8.8799573762046e-005
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar lteCoreNetwork.router2.ppp[1].queue 	queueLength:max 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, max"
+scalar lteCoreNetwork.router2.ppp[1].queue 	queueLength:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "queue length, timeavg"
+statistic lteCoreNetwork.router2.ppp[1].queue 	queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+attr interpolationmode  none
+attr title  "queueing time, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	-6.9388939039072e-018	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar lteCoreNetwork.router2.ppp[1].queue 	dropPk:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, count"
+scalar lteCoreNetwork.router2.ppp[1].queue 	dropPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "dropped packets, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[1].queue 	rcvdPk:count 	2
+attr interpolationmode  none
+attr title  "received packets, count"
+scalar lteCoreNetwork.router2.ppp[1].queue 	rcvdPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr title  "received packets, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[1].ppp 	passedUpPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.router2.ppp[1].ppp 	passedUpPk:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[1].ppp 	rcvdPkFromHL:count 	2
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar lteCoreNetwork.router2.ppp[1].ppp 	rcvdPkFromHL:sum(packetBytes) 	208
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[1].ppp 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.router2.ppp[1].ppp 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[1].ppp 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.router2.ppp[1].ppp 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[1].ppp 	rxPkOk:count 	2
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.router2.ppp[1].ppp 	rxPkOk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[1].ppp 	txPk:count 	2
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.router2.ppp[1].ppp 	txPk:sum(packetBytes) 	222
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.router2.ppp[1].ppp 	txState:timeavg 	8.8799573762046e-005
+attr interpolationmode  sample-hold
+attr title  "tx state, timeavg"
+scalar lteCoreNetwork.UE1.networkLayer.arp 	failedResolution:count 	0
+attr title  "ARP failed resolutions, count"
+scalar lteCoreNetwork.UE1.networkLayer.arp 	initiatedResolution:count 	0
+attr title  "ARP initiated resolutions, count"
+scalar lteCoreNetwork.UE1.networkLayer.arp 	sentReplies:count 	0
+attr title  "ARP replies sent, count"
+scalar lteCoreNetwork.UE1.networkLayer.arp 	sentReq:count 	0
+attr title  "ARP request sent, count"
+scalar lteCoreNetwork.UE1.eth[0].mac 	"simulated time" 	2.0000096
+scalar lteCoreNetwork.UE1.eth[0].mac 	full-duplex 	1
+scalar lteCoreNetwork.UE1.eth[0].mac 	"frames/sec sent" 	1.4999928000346
+scalar lteCoreNetwork.UE1.eth[0].mac 	"frames/sec rcvd" 	1.4999928000346
+scalar lteCoreNetwork.UE1.eth[0].mac 	"bits/sec sent" 	1007.9951616232
+scalar lteCoreNetwork.UE1.eth[0].mac 	"bits/sec rcvd" 	1007.9951616232
+scalar lteCoreNetwork.UE1.eth[0].mac 	"rx channel idle (%)" 	99.988960052992
+scalar lteCoreNetwork.UE1.eth[0].mac 	"rx channel utilization (%)" 	0.011039947008254
+scalar lteCoreNetwork.UE1.eth[0].mac 	droppedPkNotForUs:count 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, count"
+scalar lteCoreNetwork.UE1.eth[0].mac 	droppedPkNotForUs:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkNotForUs
+attr title  "packets dropped/not for us, sum(packetBytes)"
+scalar lteCoreNetwork.UE1.eth[0].mac 	rxPkFromHL:count 	3
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, count"
+scalar lteCoreNetwork.UE1.eth[0].mac 	rxPkFromHL:sum(packetBytes) 	252
+attr interpolationmode  none
+attr source  rxPkFromHL
+attr title  "packet bytes from higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.UE1.eth[0].mac 	rxPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units received, count"
+scalar lteCoreNetwork.UE1.eth[0].mac 	rxPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units received, sum"
+scalar lteCoreNetwork.UE1.eth[0].mac 	txPausePkUnits:count 	0
+attr interpolationmode  none
+attr title  "pause units sent, count"
+scalar lteCoreNetwork.UE1.eth[0].mac 	txPausePkUnits:sum 	0
+attr interpolationmode  none
+attr title  "pause units sent, sum"
+scalar lteCoreNetwork.UE1.eth[0].mac 	txPk:count 	3
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, count"
+scalar lteCoreNetwork.UE1.eth[0].mac 	txPk:sum(packetBytes) 	252
+attr interpolationmode  none
+attr source  txPk
+attr title  "packets transmitted, sum(packetBytes)"
+scalar lteCoreNetwork.UE1.eth[0].mac 	passedUpPk:count 	3
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar lteCoreNetwork.UE1.eth[0].mac 	passedUpPk:sum(packetBytes) 	252
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar lteCoreNetwork.UE1.eth[0].mac 	droppedPkIfaceDown:count 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, count"
+scalar lteCoreNetwork.UE1.eth[0].mac 	droppedPkIfaceDown:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkIfaceDown
+attr title  "packets dropped/interface down, sum(packetBytes)"
+scalar lteCoreNetwork.UE1.eth[0].mac 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar lteCoreNetwork.UE1.eth[0].mac 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar lteCoreNetwork.UE1.eth[0].mac 	rxPkOk:count 	3
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, count"
+scalar lteCoreNetwork.UE1.eth[0].mac 	rxPkOk:sum(packetBytes) 	252
+attr interpolationmode  none
+attr source  rxPkOk
+attr title  "packets received OK, sum(packetBytes)"
+scalar lteCoreNetwork.UE1.eth[0].encap 	pauseSent:count 	0
+attr title  "pause sent, count"
+scalar lteCoreNetwork.UE1.eth[0].encap 	pauseSent:sum 	0
+attr title  "pause sent, sum"
+scalar lteCoreNetwork.UE1.eth[0].encap 	decapPk:count 	3
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, count"
+scalar lteCoreNetwork.UE1.eth[0].encap 	decapPk:sum(packetBytes) 	180
+attr interpolationmode  none
+attr source  decapPk
+attr title  "packets decapsulated, sum(packetBytes)"
+scalar lteCoreNetwork.UE1.eth[0].encap 	encapPk:count 	3
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, count"
+scalar lteCoreNetwork.UE1.eth[0].encap 	encapPk:sum(packetBytes) 	180
+attr interpolationmode  none
+attr source  encapPk
+attr title  "packets encapsulated, sum(packetBytes)"

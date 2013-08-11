@@ -70,6 +70,8 @@ protected:
      * </GTP>
      */
 	virtual void loadPathsFromXML(const cXMLElement &gtpNode);
+
+	virtual void loadTunnelsFromXML(const cXMLElement &gtpNode);
 public:
 	GTP();
 	virtual ~GTP();
@@ -107,7 +109,7 @@ public:
 	 */
     GTPPath *findPath(IPvXAddress addr, unsigned char type) { return pT->findPath(addr, type); }
     GTPPath *findPath(IPvXAddress ctrlAddr) { return pT->findPath(ctrlAddr); }
-    void addTunnelEndpoint(TunnelEndpoint *te) { teT->push_back(te); }
+//    void addTunnelEndpoint(TunnelEndpoint *te) { teT->push_back(te); }
     void sendTo(GTPMessage *msg, IPvXAddress addr, int port) { socket.sendTo(msg, addr, port); }
 };
 

@@ -32,36 +32,66 @@ TunnelEndpointTable::TunnelEndpointTable() {
 
 TunnelEndpointTable::~TunnelEndpointTable() {
 	// TODO Auto-generated destructor stub
-	erase(0, tunnEnds.size());
+
 }
 
 void TunnelEndpointTable::initialize(int stage) {
-	WATCH_PTRVECTOR(tunnEnds);
+//	WATCH_PTRMAP(tunnels);
 }
 
-TunnelEndpoint *TunnelEndpointTable::findTunnelEndpoint(unsigned localId, GTPPath *path) {
-	for (unsigned i = 0; i < tunnEnds.size(); i++) {
-		TunnelEndpoint *te = tunnEnds[i];
-		if (te->getLocalId() == localId && te->getPath() == path)
-			return te;
+void TunnelEndpointTable::addEntryTunnelEndpoint(IPvXAddress subAddr, TunnelEndpoint *te) {
+	entries[subAddr] = te;
+}
+
+void TunnelEndpointTable::addTransitTunnelEndpoint(unsigned localId, TunnelEndpoint *te) {
+	transits[localId] = te;
+}
+
+TunnelEndpoint *TunnelEndpointTable::findEntryTunnelEndpoint(IPv4Datagram *datagram) {
+	TunnelEntries::iterator i = entries.find(datagram->getDestAddress());
+	if (i != entries.end()) {
+		return i->second;
+	}
+	i = entries.find(datagram->getSrcAddress());
+	if (i != entries.end()) {
+		return i->second;
 	}
 	return NULL;
 }
 
-TunnelEndpoint *TunnelEndpointTable::findTunnelEndpoint(TunnelEndpoint *sender) {
-	for (unsigned i = 0; i < tunnEnds.size(); i++) {
-		TunnelEndpoint *te = tunnEnds[i];
-		if (te->getRemoteId() == sender->getLocalId())
-			return te;
+TunnelEndpoint *TunnelEndpointTable::findTransitTunnelEndpoint(unsigned localId) {
+	TunnelTransits::iterator i = transits.find(localId);
+	if (i != transits.end()) {
+		return i->second;
 	}
 	return NULL;
 }
 
-void TunnelEndpointTable::erase(unsigned start, unsigned end) {
-	TunnelEndpoints::iterator first = tunnEnds.begin() + start;
-	TunnelEndpoints::iterator last = tunnEnds.begin() + end;
-	TunnelEndpoints::iterator i = first;
-	for (;i != last; ++i)
-		delete *i;
-	tunnEnds.erase(first, last);
-}
+//TunnelEndpoint *TunnelEndpointTable::findTunnelEndpoint(unsigned localId, GTPPath *path) {
+////	for (unsigned i = 0; i < tunnEnds.size(); i++) {
+////		TunnelEndpoint *te = tunnEnds[i];
+////		if (te->getLocalId() == localId && te->getPath() == path)
+////			return te;
+////	}
+//	return NULL;
+//}
+//
+//TunnelEndpoint *TunnelEndpointTable::findTunnelEndpoint(TunnelEndpoint *sender) {
+////	for (unsigned i = 0; i < tunnEnds.size(); i++) {
+////		TunnelEndpoint *te = tunnEnds[i];
+////		if (te->getRemoteId() == sender->getLocalId())
+////			return te;
+////	}
+//	return NULL;
+//}
+
+//void TunnelEndpointTable::erase(unsigned start, unsigned end) {
+////	TunnelEndpoints::iterator first = tunnEnds.begin();
+////	first = first + start;
+////	TunnelEndpoints::iterator last = tunnEnds.begin();
+////	last = last + end;
+////	TunnelEndpoints::iterator i = first;
+////	for (;i != last; ++i)
+////		delete i->second;
+////	tunnEnds.erase(first, last);
+//}

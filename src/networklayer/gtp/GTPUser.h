@@ -27,6 +27,9 @@ public:
 
 	virtual void initialize(int stage);
 
+	virtual void handleMessage(cMessage *msg);
+	void processGTPMessage(GTPMessage *msg);
+
 	/* notification board */
 	virtual void receiveChangeNotification(int category, const cPolymorphic *details);
 };

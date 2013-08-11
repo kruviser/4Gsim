@@ -62,6 +62,7 @@ void IPv4::initialize()
 
     // by default no MANET routing
     manetRouting = false;
+    gtpUser = false;
 
 #ifdef WITH_MANET
     // test for the presence of MANET routing
@@ -84,6 +85,22 @@ void IPv4::initialize()
     // assistance from the IPv4 component
     cProperties *props = destmod->getProperties();
     manetRouting = props && props->getAsBool("reactive");
+#endif
+
+#ifdef WITH_GTP
+    // test for the presence of GTP user module
+    // check if that gate is connected at all
+    cGate *gtpGate = gate("transportOut", gtpGateIndex)->getPathEndGate();
+    if (gtpGate==NULL)
+        return;
+
+    cModule *destmod = gtpGate->getOwnerModule();
+    if (destmod==NULL)
+        return;
+
+    std::string moduleName = destmod->getNedTypeName();
+    if (!moduleName.compare("inet.networklayer.gtp.GTPUser"))
+    	gtpUser = true;
 #endif
 }
 
@@ -208,9 +225,21 @@ void IPv4::handlePacketFromNetwork(IPv4Datagram *datagram, InterfaceEntry *fromI
         }
         else if (!rt->isIPForwardingEnabled())
         {
-            EV << "forwarding off, dropping packet\n";
-            numDropped++;
-            delete datagram;
+#ifdef WITH_GTP
+        	if (gtpUser)
+        	{
+        		EV << "forwarding off, GTP module available, sending packet\n";
+        		sendToGTP(datagram);
+        	}
+        	else
+        	{
+#endif
+        		EV << "forwarding off, dropping packet\n";
+        		numDropped++;
+        		delete datagram;
+#ifdef WITH_GTP
+        	}
+#endif
         }
         else
             routeUnicastPacket(datagram, NULL/*destIE*/, IPv4Address::UNSPECIFIED_ADDRESS);
@@ -439,9 +468,9 @@ void IPv4::routeUnicastPacket(IPv4Datagram *datagram, InterfaceEntry *destIE, IP
             else
             {
 #endif
-                EV << "unroutable, sending ICMP_DESTINATION_UNREACHABLE\n";
-                numUnroutable++;
-                icmpAccess.get()->sendErrorMessage(datagram, ICMP_DESTINATION_UNREACHABLE, 0);
+           		EV << "unroutable, sending ICMP_DESTINATION_UNREACHABLE\n";
+            	numUnroutable++;
+            	icmpAccess.get()->sendErrorMessage(datagram, ICMP_DESTINATION_UNREACHABLE, 0);
 #ifdef WITH_MANET
             }
 #endif
@@ -834,3 +863,10 @@ void IPv4::sendToManet(cPacket *packet)
 }
 #endif
 
+#ifdef WITH_GTP
+void IPv4::sendToGTP(cPacket *packet)
+{
+    ASSERT(gtpUser);
+    send(packet, "transportOut", gtpGateIndex);
+}
+#endif

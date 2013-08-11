@@ -183,4 +183,6 @@ module ENB
         networkLayer.udpOut --> udp.ipIn;
         gtpu.udpOut --> udp.appIn++;
         udp.appOut++ --> gtpu.udpIn;
+        gtpu.ipOut --> networkLayer.gtpIn;
+        networkLayer.gtpOut --> gtpu.ipIn;
 }

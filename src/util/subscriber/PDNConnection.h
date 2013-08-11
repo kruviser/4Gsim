@@ -75,7 +75,7 @@ public:
 	void setPDNGwAddress(IPvXAddress pdnAddr) { this->pdnAddr = pdnAddr; }
 	void setSubscriberAddress(IPvXAddress subAddr);
 	void setType(unsigned char type) { this->type = type; }
-	void setS5S8TunnEnd(TunnelEndpoint *s5s8Tunn) { s5s8Tunn->setOwner(this); this->s5s8Tunn = s5s8Tunn; }
+	void setS5S8TunnEnd(TunnelEndpoint *s5s8Tunn) { /*s5s8Tunn->setOwner(this);*/ this->s5s8Tunn = s5s8Tunn; }
 
 	/*
 	 * Getter methods.

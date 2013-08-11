@@ -18,6 +18,8 @@
 #include "TunnelEndpointTableAccess.h"
 #include "GTPPathTableAccess.h"
 #include "BearerContext.h"
+#include "IPv4Datagram.h"
+#include "GTPUtils.h"
 
 Define_Module(GTPUser);
 
@@ -38,24 +40,80 @@ void GTPUser::initialize(int stage) {
 	nb->subscribe(this, NF_SUB_NEEDS_TUNN);
 }
 
+void GTPUser::handleMessage(cMessage *msg) {
+	GTP::handleMessage(msg);
+
+	// message that has to be encapsulated in a GTP user plane message
+	if (msg->arrivedOn("ipIn")) {
+		IPv4Datagram *datagram = check_and_cast<IPv4Datagram*>(msg);
+
+		TunnelEndpoint *te = teT->findEntryTunnelEndpoint(datagram);
+		if (te) {
+			EV << "GTPUser: Subscriber found. Encapsulating and sending the GTP user message.\n";
+			GTPPath *path = te->getPath();
+
+			GTPv1Header *header = GTPUtils().createHeader(GPDU, 1, 0, 0, 0, te->getRemoteId(), 0, 0, 0, std::vector<GTPv1Extension>());
+			GTPMessage *gtpMsg = new GTPMessage(msg->getName());
+			gtpMsg->setHeader(header);
+			gtpMsg->encapsulate(PK(msg));
+
+			path->send(gtpMsg);
+		} else {
+			EV << "GTPUser: Unknown subscriber IP address. Dropping the message.\n";
+			delete msg;
+		}
+	}
+}
+
+void GTPUser::processGTPMessage(GTPMessage *msg) {
+	// encapsulated GTP user message
+
+	GTPv1Header *header = check_and_cast<GTPv1Header*>(msg->getHeader());
+	unsigned teid = header->getTeid();
+
+	delete msg->removeControlInfo();
+
+	TunnelEndpoint *te = teT->findTransitTunnelEndpoint(teid);
+	if (te) {	// transit tunnel in SGW, have to change the tunnel id and forward it to eNB
+		EV << "GTPUser: Transit tunnel found for teid = " << te->getRemoteId() << ". Forwarding the GTP user message.\n";
+		GTPPath *path = te->getPath();
+		header->setTeid(te->getRemoteId());
+		path->send(msg);
+	} else {
+		// should be tunnel exit
+		IPv4Datagram *datagram = check_and_cast<IPv4Datagram*>(msg->decapsulate());
+
+		delete msg;
+
+		TunnelEndpoint *te = teT->findEntryTunnelEndpoint(datagram);
+		if (te) {
+			EV << "GTPUser: Subscriber found. Decapsulating and sending the IP packet.\n";
+			this->send(datagram, gate("ipOut"));
+		} else {
+			EV << "GTPUser: Unknown subscriber IP address. Dropping the message.\n";
+			delete datagram;
+		}
+	}
+}
+
 void GTPUser::receiveChangeNotification(int category, const cPolymorphic *details) {
 
 	Enter_Method_Silent();
-	if (category == NF_SUB_NEEDS_TUNN) {
-		EV << "GTPUser: Received NF_SUB_NEEDS_TUNN notification. Processing notification.\n";
-		BearerContext *bearer = check_and_cast<BearerContext*>(details);
-		TunnelEndpoint *userTe = bearer->getENBTunnEnd();
-		GTPPath *path = pT->findPath(userTe->getRemoteAddr(), S1_U_eNodeB_GTP_U);
-		if (path == NULL) {
-			nb->fireChangeNotification(NF_SUB_TUNN_NACK, bearer);
-			return;
-		}
-		TunnelEndpoint *newTe = new TunnelEndpoint(path);
-		newTe->setRemoteId(userTe->getRemoteId());
-		teT->push_back(newTe);
-		bearer->setENBTunnEnd(newTe);
-		delete userTe;
-		nb->fireChangeNotification(NF_SUB_TUNN_ACK, bearer);
-	}
+//	if (category == NF_SUB_NEEDS_TUNN) {
+//		EV << "GTPUser: Received NF_SUB_NEEDS_TUNN notification. Processing notification.\n";
+//		BearerContext *bearer = check_and_cast<BearerContext*>(details);
+//		TunnelEndpoint *userTe = bearer->getENBTunnEnd();
+//		GTPPath *path = pT->findPath(userTe->getRemoteAddr(), S1_U_eNodeB_GTP_U);
+//		if (path == NULL) {
+//			nb->fireChangeNotification(NF_SUB_TUNN_NACK, bearer);
+//			return;
+//		}
+//		TunnelEndpoint *newTe = new TunnelEndpoint(path);
+//		newTe->setRemoteId(userTe->getRemoteId());
+//		teT->push_back(newTe);
+//		bearer->setENBTunnEnd(newTe);
+//		delete userTe;
+//		nb->fireChangeNotification(NF_SUB_TUNN_ACK, bearer);
+//	}
 }
 

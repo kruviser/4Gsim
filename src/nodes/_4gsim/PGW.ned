@@ -99,7 +99,7 @@ module PGW
         }
         dctdump: DCTDump {
             parameters:
-                @display("p=206,264;i=abstract/cache_s");
+                @display("p=336,312;i=abstract/cache_s");
                 dumpFile = dumpFile;
             gates:
                 ifIn[sizeof(pppg)+sizeof(ethg)+numExtInterfaces];
@@ -115,14 +115,14 @@ module PGW
             @display("p=59,368");
         }
         gtpu: GTPUser {
-            @display("p=277,70");
+            @display("p=241,67");
             configFile = configFile;
         }
         tunnelEndpointTable: TunnelEndpointTable {
             @display("p=186,214");
         }
         pathTable: GTPPathTable {
-            @display("p=186,280");
+            @display("p=57,295");
         }
     connections allowunconnected:
         gtpc.udpOut --> udp.appIn++;
@@ -160,4 +160,6 @@ module PGW
             ext[i].upperLayerIn <-- dctdump.ifOut[sizeof(pppg)+sizeof(ethg)+i];
             dctdump.netIn[sizeof(pppg)+sizeof(ethg)+i] <-- networkLayer.ifOut[sizeof(pppg)+sizeof(ethg)+i];
         }
+        gtpu.ipOut --> networkLayer.gtpIn;
+        networkLayer.gtpOut --> gtpu.ipIn;
 }

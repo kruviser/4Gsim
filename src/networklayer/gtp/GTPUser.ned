@@ -25,6 +25,8 @@ simple GTPUser
     gates:
         input udpIn;
         output udpOut;
+        input ipIn;
+        output ipOut;
         input radioIn;
         output radioOut;
 }

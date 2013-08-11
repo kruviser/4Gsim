@@ -27,6 +27,7 @@ namespace INETFw // load headers into a namespace, to avoid conflicts with platf
 
 #include "UDPSerializer.h"
 #include "GTPSerializer.h"
+#include "UDP.h"
 
 #include "TCPIPchecksum.h"
 
@@ -44,7 +45,7 @@ int UDPSerializer::serialize(const UDPPacket *pkt, unsigned char *buf, unsigned 
     int packetLength;
     cPacket *payload;
 
-    packetLength = pkt->getByteLength();
+    packetLength = UDP_HEADER_BYTES;
     udphdr->uh_sport = htons(pkt->getSourcePort());
     udphdr->uh_dport = htons(pkt->getDestinationPort());
 
@@ -52,7 +53,7 @@ int UDPSerializer::serialize(const UDPPacket *pkt, unsigned char *buf, unsigned 
         switch (pkt->getDestinationPort()) {
         case GTP_CONTROL_PORT:
         case GTP_USER_PORT:
-            packetLength += GTPSerializer().serialize(check_and_cast<GTPMessage*> (payload), buf + pkt->getByteLength(), bufsize - pkt->getByteLength());
+            packetLength += GTPSerializer().serialize(check_and_cast<GTPMessage*> (payload), buf + UDP_HEADER_BYTES, bufsize - UDP_HEADER_BYTES);
             break;
         default:
             break;

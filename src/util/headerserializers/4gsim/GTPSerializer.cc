@@ -17,7 +17,9 @@
 
 #include <platdep/sockets.h>
 #include "GTPSerializer.h"
+#include "IPv4Serializer.h"
 #include "GTPUtils.h"
+#include "IPv4Datagram.h"
 
 GTPSerializer::GTPSerializer() {
 	// TODO Auto-generated constructor stub
@@ -65,6 +67,9 @@ unsigned GTPSerializer::serializeHeader(GTPMessage *msg, unsigned char *buf) {
 		for (unsigned i = 0; i < msg->getIesArraySize(); i++) {
 			msgLen += msg->getIes(i)->getValueArraySize() + GTPV1_IE_HEADER_MAX_SIZE;
 		}
+		cPacket *encapPkt = msg->getEncapsulatedPacket();
+		if (encapPkt)
+			msgLen += encapPkt->getByteLength();
 		buf = (unsigned char*)calloc(hdrLen, sizeof(unsigned char));
 		*((unsigned char*)(p)) =
 				((hdr->getVersion() << 5) & 0xe0) | ((hdr->getPt() << 4) & 0x10)  | ((hdr->getE() << 2) & 0x04) | ((hdr->getS() << 1) & 0x02) | ((hdr->getPn()) & 0x01);
@@ -137,6 +142,10 @@ unsigned GTPSerializer::serialize(GTPMessage *msg, unsigned char *buf, unsigned 
 		GTPInfoElem *ie = msg->getIes(i);
 		msgLen += serializeIE(msg->getHeader()->getVersion(), ie, buf + msgLen);
 	}
+
+	IPv4Datagram *datagram = dynamic_cast<IPv4Datagram*>(msg->getEncapsulatedPacket());
+	if (datagram)
+		msgLen += IPv4Serializer().serialize(datagram, buf + msgLen, bufsize - msgLen);
 
 	return msgLen;
 }

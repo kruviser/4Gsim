@@ -19,6 +19,7 @@
 #include "GTP.h"
 #include "GTPUtils.h"
 #include "GTPControl.h"
+#include "GTPUser.h"
 
 GTPPath::GTPPath() {
 	echoTimer = NULL;
@@ -66,6 +67,9 @@ void GTPPath::processMessage(cMessage *msg) {
 			processEchoRequest(gmsg);
 			break;
 		case EchoResponse:
+			break;
+		case GPDU:
+			dynamic_cast<GTPUser*>(module)->processGTPMessage(gmsg);
 			break;
 		default:
 			dynamic_cast<GTPControl*>(module)->processMessage(gmsg, this);

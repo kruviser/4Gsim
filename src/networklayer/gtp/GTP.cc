@@ -66,6 +66,9 @@ void GTP::initialize(int stage) {
 		socket.bind(GTP_USER_PORT);
 
 	loadPathsFromXML(*gtpNode);
+
+	if (plane == GTP_USER)
+		loadTunnelsFromXML(*gtpNode);
 }
 
 void GTP::handleMessage(cMessage *msg) {
@@ -75,17 +78,16 @@ void GTP::handleMessage(cMessage *msg) {
 		EV << "self message.\n";
 		path = (GTPPath*)msg->getContextPointer();
 		path->processEchoTimer();
-	} else if (msg->getKind() == UDP_I_DATA) {
+	} else if (msg->arrivedOn("udpIn")) {
 		EV << "network message.";
 		path = pT->findPath(msg);
 		if (path != NULL) {
-		    EV << "Passing the message to the correct path.\n";
+		    EV << " Passing the message to the correct path.\n";
 		    path->processMessage(msg);
-		} else
-		    EV << "Unknown path, dropping the message.\n";
-		delete msg;
-	} else {
-		EV << "Unrecognized network message, dropping the message.\n";
+		} else {
+		    EV << " Unknown path, dropping the message.\n";
+			delete msg;
+		}
 	}
 }
 
@@ -125,3 +127,64 @@ void GTP::loadPathsFromXML(const cXMLElement& gtpNode) {
 	    }
 	}
 }
+
+void GTP::loadTunnelsFromXML(const cXMLElement& gtpNode) {
+	cXMLElement* tunnelsNode = gtpNode.getElementByPath("Tunnels");
+	if (tunnelsNode != NULL) {
+	    cXMLElementList tunnelsList = tunnelsNode->getChildren();
+	    for (cXMLElementList::iterator tunnelsIt = tunnelsList.begin(); tunnelsIt != tunnelsList.end(); tunnelsIt++) {
+
+	    	std::string elementName = (*tunnelsIt)->getTagName();
+	        if ((elementName == "TunnelEntry")) {
+
+				const char *subAddr = (*tunnelsIt)->getAttribute("subAddr");
+				if (!subAddr)
+					error("GTP: Tunnel has no subAddr attribute");
+
+	        	if (!(*tunnelsIt)->getAttribute("remoteId"))
+	        		error("GTP: Tunnel has no <remoteId> attribute");
+	        	unsigned remoteId = atoi((*tunnelsIt)->getAttribute("remoteId"));
+
+	        	if (!(*tunnelsIt)->getAttribute("path"))
+	        		error("GTP: Tunnel has no <path> attribute");
+	        	unsigned path = atoi((*tunnelsIt)->getAttribute("path"));
+
+	        	GTPPath *gtpPath = pT->at(path);
+	        	if (gtpPath != NULL) {
+	        		TunnelEndpoint *te = new TunnelEndpoint();
+	        		te->setRemoteId(remoteId);
+	        		te->setPath(gtpPath);
+	        		teT->addEntryTunnelEndpoint(IPvXAddress(subAddr), te);
+	        	} else {
+	        		error("GTP: Path id does not match any one from the table");
+	        	}
+	        }
+
+	        if ((elementName == "TunnelTransit")) {
+
+	        	if (!(*tunnelsIt)->getAttribute("localId"))
+	        		error("GTP: Tunnel has no <localId> attribute");
+	        	unsigned localId = atoi((*tunnelsIt)->getAttribute("localId"));
+
+	        	if (!(*tunnelsIt)->getAttribute("remoteId"))
+	        		error("GTP: Tunnel has no <remoteId> attribute");
+	        	unsigned remoteId = atoi((*tunnelsIt)->getAttribute("remoteId"));
+
+	        	if (!(*tunnelsIt)->getAttribute("path"))
+	        		error("GTP: Tunnel has no <path> attribute");
+	        	unsigned path = atoi((*tunnelsIt)->getAttribute("path"));
+
+	        	GTPPath *gtpPath = pT->at(path);
+	        	if (gtpPath != NULL) {
+	        		TunnelEndpoint *te = new TunnelEndpoint();
+	        		te->setRemoteId(remoteId);
+	        		te->setPath(gtpPath);
+	        		teT->addTransitTunnelEndpoint(localId, te);
+	        	} else {
+	        		error("GTP: Path id does not match any one from the table");
+	        	}
+	        }
+	    }
+	}
+}
+

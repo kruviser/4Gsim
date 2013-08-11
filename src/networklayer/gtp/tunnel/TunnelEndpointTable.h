@@ -19,6 +19,7 @@
 #define TUNNELENDPOINTTABLE_H_
 
 #include "TunnelEndpoint.h"
+#include "IPv4Datagram.h"
 
 /*
  * Class for GTP tunnel end point table. This table will hold all the tunnel end points
@@ -26,10 +27,13 @@
  * The tunnel end points for GTP control and GTP user are stored in a single tunnel end
  * point table.
  */
+
 class TunnelEndpointTable : public cSimpleModule {
 private:
-	typedef std::vector<TunnelEndpoint*> TunnelEndpoints;
-	TunnelEndpoints tunnEnds;
+	typedef std::map<IPvXAddress, TunnelEndpoint*> TunnelEntries;
+	TunnelEntries entries;
+	typedef std::map<unsigned, TunnelEndpoint*> TunnelTransits;
+	TunnelTransits transits;
 public:
 	TunnelEndpointTable();
 	virtual ~TunnelEndpointTable();
@@ -43,20 +47,30 @@ public:
      * Method for finding a GTP tunnel end point for a given local TEID and path.
      * The method returns the tunnel end point, if it is found, or NULL otherwise.
      */
-	TunnelEndpoint *findTunnelEndpoint(unsigned localId, GTPPath *path);
+//	TunnelEndpoint *findTunnelEndpoint(unsigned localId, GTPPath *path);
 
     /*
      * Method searches the table for a specific tunnel end point. The method returns
      * the tunnel end point, if it is found, or NULL otherwise.
      */
-	TunnelEndpoint *findTunnelEndpoint(TunnelEndpoint *sender);
+//	TunnelEndpoint *findTunnelEndpoint(TunnelEndpoint *sender);
 
     /*
      * Wrapper methods.
      */
-	void push_back(TunnelEndpoint *te) { tunnEnds.push_back(te); }
-	void erase(unsigned start, unsigned end);
-	unsigned size() {return tunnEnds.size();}
+
+	void addEntryTunnelEndpoint(IPvXAddress subAddr, TunnelEndpoint *te);
+
+	void addTransitTunnelEndpoint(unsigned localId, TunnelEndpoint *te);
+
+	TunnelEndpoint *findEntryTunnelEndpoint(IPv4Datagram *datagram);
+
+	TunnelEndpoint *findTransitTunnelEndpoint(unsigned localId);
+
+//	TE findTeForSubAddr(IPvXAddress subAddr);
+//	void push_back(TunnelEndpoint *te) { tunnEnds.push_back(te); }
+//	void erase(unsigned start, unsigned end);
+//	unsigned size() { return tunnEnds.size(); }
 };
 
 #endif /* TUNNELENDPOINTTABLE_H_ */

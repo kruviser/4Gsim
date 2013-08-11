@@ -43,7 +43,7 @@ module GTPNode
     parameters:
         @node();
         @labels(node,ethernet-node);
-        @display("i=device/pc2;bgb=573,427");
+        @display("bgb=920,462;i=device/mainframe");
         int numUdpApps = 2;
         string udpAppType = default("n/a");
         string gtpType = default("n/a");
@@ -102,7 +102,7 @@ module GTPNode
         }
         dctdump: DCTDump {
             parameters:
-                @display("p=206,264;i=abstract/cache_s");
+                @display("p=336,310;i=abstract/cache_s");
                 dumpFile = dumpFile;
             gates:
                 ifIn[sizeof(pppg)+sizeof(ethg)+numExtInterfaces];
@@ -120,7 +120,7 @@ module GTPNode
             configFile = configFile;
         }
         gtpu: GTPUser {
-            @display("p=277,70");
+            @display("p=232,67");
             configFile = configFile;
         }
         tunnelEndpointTable: TunnelEndpointTable {

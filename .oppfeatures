@@ -653,5 +653,33 @@
         compileFlags = ""
         linkerFlags = ""
         />
+    <feature
+        id="GTP"
+        name="GTP"
+        description = "GPRS Tunneling protocol"
+        initiallyEnabled = "true"
+        requires = "IPv4 UDP Ieee80211"
+        labels = ""
+        nedPackages = "
+                       inet.networklayer.gtp
+                      "
+        extraSourceFolders = ""
+        compileFlags = "-DWITH_GTP"
+        linkerFlags = ""
+        />
+    <feature
+        id="GTP_examples"
+        name="GTP examples"
+        description = "GTP examples"
+        initiallyEnabled = "true"
+        requires = "GTP IPv4 UDP PPP Ieee80211"
+        labels = ""
+        nedPackages = "
+                       inet.examples.gtp
+                      "
+        extraSourceFolders = ""
+        compileFlags = ""
+        linkerFlags = ""
+        />
 </features>
 
